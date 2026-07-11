@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>רומא, ביחד · 20–25 באוק׳ 2026</title>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#5E1F2D">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="רומא">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Heebo:wght@400;500;700;800&family=Frank+Ruhl+Libre:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --wine:#5E1F2D;--wine-2:#732636;--gold:#C9A227;--gold-deep:#a8871c;
+    --terra:#C0492E;--parchment:#F5EEE1;--parchment-2:#ece1cd;--ink:#241c15;--muted:#6a5d4e;
+    --line:#ddd0b8;--card:#fffdf6;--olive:#6B7A4F;--shadow:0 1px 2px rgba(60,26,20,.06),0 8px 28px rgba(60,26,20,.10);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--parchment);color:var(--ink);
+    font-family:"Heebo","Hanken Grotesk",system-ui,sans-serif;font-size:17.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4{font-family:"Frank Ruhl Libre","Fraunces",Georgia,serif;font-weight:600;line-height:1.2;margin:0}
+  .mono{font-family:"Space Mono","Heebo",ui-monospace,monospace}
+  a{color:inherit}
+  img{display:block;max-width:100%}
+
+  .imgwrap{position:relative;overflow:hidden;background:linear-gradient(135deg,#7a2a3a,#3a141d)}
+  .imgwrap img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease}
+  .tphoto{height:168px;border-radius:13px;margin:0 0 15px}
+  .cphoto{height:150px;border-radius:16px 16px 0 0;margin:-18px -18px 15px}
+  .imgwrap .maplink{position:absolute;inset:0;display:block;text-decoration:none}
+  .mappill{position:absolute;inset-inline-end:8px;bottom:8px;z-index:3;background:rgba(60,26,20,.86);color:#fff;font-family:"Space Mono","Heebo",monospace;font-size:11px;letter-spacing:.2px;padding:5px 9px;border-radius:999px;display:inline-flex;align-items:center;gap:4px;border:1px solid rgba(201,162,39,.55);backdrop-filter:blur(2px);transition:.18s}
+  .imgwrap:hover .mappill{background:var(--gold);color:var(--wine)}
+  .btn{display:inline-flex;align-items:center;gap:6px;margin-top:13px;font-family:"Space Mono","Heebo",monospace;font-size:12.5px;font-weight:700;letter-spacing:.2px;text-decoration:none;background:var(--wine);color:#fff;padding:9px 14px;border-radius:10px;border:1px solid var(--wine);transition:.18s}
+  .btn:hover{background:var(--gold);color:var(--wine);border-color:var(--gold)}
+  .booknote{font-family:"Space Mono","Heebo",monospace;font-size:12px;line-height:1.6;color:var(--muted);margin-top:12px}
+  .card:hover .imgwrap img,.tblock:hover .imgwrap img{transform:scale(1.045)}
+
+  .nav{position:sticky;top:0;z-index:50;background:rgba(60,26,20,.97);backdrop-filter:blur(6px);border-bottom:1px solid rgba(201,162,39,.28)}
+  .nav-inner{max-width:1080px;margin:0 auto;padding:11px 20px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+  .brand{color:var(--parchment);font-family:"Frank Ruhl Libre",serif;font-weight:700;font-size:19px;white-space:nowrap}
+  .brand b{color:var(--gold)}
+  .nav-links{display:flex;gap:4px;flex-wrap:wrap;margin-inline-start:auto}
+  .nav-links a{color:#e8d9c4;text-decoration:none;font-size:13.5px;font-weight:600;padding:6px 10px;border-radius:999px;transition:.18s;white-space:nowrap}
+  .nav-links a:hover,.nav-links a.active{background:var(--gold);color:var(--wine)}
+
+  .hero{position:relative;min-height:86vh;display:flex;align-items:flex-end;overflow:hidden;background:linear-gradient(160deg,#5e1f2d,#2a1119)}
+  .hero .ph,.banner .ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(35,17,12,.15) 0%,rgba(35,17,12,.4) 45%,rgba(30,14,10,.93) 100%)}
+  .hero-content{position:relative;z-index:2;max-width:1080px;margin:0 auto;width:100%;padding:0 24px 64px;color:#fff}
+  .eyebrow{font-family:"Space Mono","Heebo",monospace;font-size:13px;letter-spacing:1px;color:var(--gold)}
+  .hero h1{font-size:clamp(42px,8vw,86px);font-weight:700;margin:.18em 0 .1em;text-shadow:0 2px 30px rgba(0,0,0,.4)}
+  .hero h1 em{font-style:normal;color:var(--gold)}
+  .hero-sub{font-size:clamp(17px,2.4vw,21px);max-width:54ch;color:#f2e7d8}
+  .hero-facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+  .fact{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:10px 14px;backdrop-filter:blur(4px)}
+  .fact .k{font-family:"Space Mono","Heebo",monospace;font-size:11.5px;letter-spacing:.5px;color:var(--gold);display:block}
+  .fact .v{font-size:15.5px;font-weight:600;color:#fff}
+
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  section.block{padding:56px 0}
+  .sec-label{font-family:"Space Mono","Heebo",monospace;font-size:12.5px;letter-spacing:1px;color:var(--terra);margin-bottom:8px}
+
+  .legend{background:var(--wine);color:#f2e7d8}
+  .legend h2{color:#fff;font-size:27px}
+  .legend .sec-label{color:var(--gold)}
+  .legend-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:22px}
+  .legend-item{display:flex;gap:12px;align-items:flex-start}
+  .legend-item .desc{font-size:14.5px;color:#dcc9b0}
+  .callout{background:rgba(201,162,39,.12);border:1px solid rgba(201,162,39,.4);border-radius:14px;padding:18px 20px;margin-top:24px}
+  .callout h4{color:var(--gold);font-size:18px;margin-bottom:6px}
+  .callout p{font-size:15px;color:#e7d8c4;margin:0 0 8px}
+  .callout p:last-child{margin:0}
+
+  .badge{display:inline-flex;align-items:center;gap:5px;font-family:"Space Mono","Heebo",monospace;font-size:11.5px;letter-spacing:.2px;font-weight:700;padding:4px 9px;border-radius:999px;white-space:nowrap;line-height:1.2}
+  .b-city{background:#e7ddc4;color:#6a5212;border:1px solid #cdbd92}
+  .b-art{background:#dfe4ef;color:#334a72;border:1px solid #b7c3da}
+  .b-food{background:#d6efe1;color:#0c5a3a;border:1px solid #9fd6bb}
+  .b-shop{background:#f3dde1;color:#8c2f44;border:1px solid #e2b3bd}
+  .b-night{background:#241733;color:#e3c9ff;border:1px solid #5a3f78}
+  .b-culture{background:var(--gold);color:#3a2c08}
+  .b-daytrip{background:transparent;color:var(--ink);border:1px solid var(--line)}
+  .b-foot{background:#e5e0d2;color:#4a4636;border:1px solid #cdc4ad}
+  .legend .b-daytrip{color:#f2e7d8;border-color:#7a5b3d}
+
+  .day{border-top:1px solid var(--line)}
+  .banner{position:relative;min-height:300px;display:flex;align-items:flex-end;overflow:hidden;background:linear-gradient(160deg,var(--wine-2),var(--wine))}
+  .banner::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(35,17,12,.1),rgba(30,14,10,.86))}
+  .banner-in{position:relative;z-index:2;max-width:1080px;margin:0 auto;width:100%;padding:0 24px 28px;color:#fff}
+  .daytag{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+  .daynum{font-family:"Space Mono","Heebo",monospace;font-size:13.5px;letter-spacing:.5px;color:var(--gold)}
+  .banner h2{font-size:clamp(28px,5vw,46px);text-shadow:0 2px 24px rgba(0,0,0,.45)}
+  .banner .when{font-family:"Space Mono","Heebo",monospace;font-size:13.5px;color:#f0e2d0;margin-top:6px}
+
+  .day-body{padding:34px 0 18px}
+  .daymeta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px;align-items:center}
+  .chip{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:14px;box-shadow:var(--shadow)}
+  .chip b{font-family:"Space Mono","Heebo",monospace;color:var(--terra);font-size:13px}
+
+  .spine{position:relative;margin-inline-start:8px;padding-inline-start:30px;border-inline-start:2px solid var(--line)}
+  .tblock{position:relative;padding:0 0 34px}
+  .tblock::before{content:"";position:absolute;inset-inline-start:-39px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--parchment);border:3px solid var(--gold)}
+  .tblock.food::before{border-color:var(--olive)}
+  .tblock.eve::before{border-color:var(--terra)}
+  .tblock.night::before{border-color:#7a52a3}
+  .ttime{font-family:"Space Mono","Heebo",monospace;font-size:13px;letter-spacing:.3px;color:var(--muted)}
+  .tcat{font-family:"Space Mono","Heebo",monospace;font-size:11.5px;letter-spacing:.3px;color:var(--gold-deep);font-weight:700;margin-top:2px}
+  .tblock.food .tcat{color:var(--olive)}
+  .tblock.eve .tcat{color:var(--terra)}
+  .tblock.night .tcat{color:#7a52a3}
+  .tblock h3{font-size:23px;margin:5px 0 7px}
+  .tblock p{margin:0 0 12px;color:#33302a;font-size:16px}
+  .meta-line{font-family:"Space Mono","Heebo",monospace;font-size:13px;color:var(--muted);margin:3px 0;display:flex;gap:8px;flex-wrap:wrap}
+  .meta-line span{color:var(--ink)}
+  .cost{display:inline-block;font-family:"Space Mono","Heebo",monospace;font-size:13.5px;font-weight:700;background:var(--parchment-2);border-radius:7px;padding:3px 9px;color:var(--wine)}
+  .badgerow{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 4px}
+
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:16px;margin-top:6px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 18px 16px;box-shadow:var(--shadow)}
+  .card .kind{font-family:"Space Mono","Heebo",monospace;font-size:11.5px;letter-spacing:.3px;color:var(--muted)}
+  .card h4{font-size:19.5px;margin:5px 0 6px}
+  .card p{margin:0 0 10px;font-size:15px;color:#3a362d}
+  .card .addr{font-family:"Space Mono","Heebo",monospace;font-size:12.5px;color:var(--muted);line-height:1.6}
+  .card .addr b{color:var(--ink);font-weight:700}
+  .subhead{display:flex;align-items:center;gap:12px;margin:34px 0 4px}
+  .subhead .sec-label{margin:0}
+  .subhead::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  .notes{background:var(--wine);color:#f0e2d0}
+  .notes h2{color:#fff}
+  .notes .sec-label{color:var(--gold)}
+  .notegrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:24px}
+  .note{background:rgba(255,255,255,.05);border:1px solid rgba(201,162,39,.22);border-radius:14px;padding:18px 20px}
+  .note h4{color:var(--gold);font-size:18px;margin-bottom:8px}
+  .note p{font-size:14.5px;color:#e0d0ba;margin:0 0 8px}
+  .note .flag{color:var(--terra);font-weight:700}
+
+  footer{background:#2a1119;color:#b89a7d;text-align:center;padding:34px 24px;font-size:13.5px}
+  footer .mono{color:var(--gold)}
+
+  .langfab{position:fixed;bottom:18px;inset-inline-start:18px;z-index:60;display:inline-flex;align-items:center;gap:7px;background:var(--gold);color:var(--wine);font-family:"Space Mono","Heebo",monospace;font-weight:700;font-size:14px;letter-spacing:.2px;text-decoration:none;padding:11px 17px;border-radius:999px;box-shadow:0 6px 20px rgba(60,26,20,.35);border:1px solid var(--gold-deep);transition:.18s}
+  .langfab:hover{background:#fff;color:var(--wine)}
+
+  @media (max-width:560px){
+    body{font-size:16.5px}.hero{min-height:78vh}
+    .nav-links{width:100%;margin-inline-start:0;justify-content:flex-start}.spine{margin-inline-start:4px}
+  }
+  @media (prefers-reduced-motion:no-preference){
+    .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+    .reveal.in{opacity:1;transform:none}
+  }
+  article.day.is-today::after{content:"";position:absolute;inset-block:0;inset-inline-start:0;width:5px;background:var(--terra);z-index:3}
+  article.day.is-today{position:relative}
+  .todaytag{display:inline-flex;align-items:center;gap:6px;background:var(--terra);color:#fff;font-family:"Space Mono","Heebo",monospace;font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px;margin-inline-start:10px;vertical-align:middle}
+  @media print{
+    .nav,.langfab,.hero .ph,.banner .ph,.btn,.mappill{display:none!important}
+    body{background:#fff;color:#000;font-size:11.5pt}
+    .hero,.banner{min-height:auto!important;background:#fff!important}
+    .hero::after,.banner::after{display:none!important}
+    .hero-content,.banner-in{color:#000!important;padding:10px 0!important}
+    .hero h1,.banner h2{text-shadow:none!important}
+    .day,.card,.note,.tblock,.callout{break-inside:avoid;page-break-inside:avoid}
+    section.block{padding:14px 0!important}
+    .notes,.legend{background:#fff!important;color:#000!important}
+    .notes h2,.legend h2,.note h4,.note p,.legend p,.hero h1,.hero-sub,.banner h2,.banner .when{color:#000!important}
+    .note,.callout{background:#f3f3f3!important;border:1px solid #ccc!important}
+    a{color:#000!important}
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="brand">רומא <b>·</b> <span class="mono" style="font-size:14px">20–25 אוק׳</span></div>
+    <div class="nav-links"><a href="essentials-he.html">🧳 מדריך כיס</a>
+      <a href="#overview">סקירה</a><a href="map.html" style="background:var(--olive);color:#fff">🗺️ מפה חיה</a><a href="#day1">1</a><a href="#day2">2</a><a href="#day3">3</a>
+      <a href="#day4">4</a><a href="#day5">5</a><a href="#day6">יציאה</a><a href="#notes">הערות</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <img class="ph" alt="רומא — הקולוסיאום" src="https://commons.wikimedia.org/wiki/Special:FilePath/Colosseo%202020.jpg?width=1280" onerror="this.remove()">
+  <div class="hero-content">
+    <div class="eyebrow">שתי אחיות · 18 ו-23 · 5 לילות · עיר, אוכל, קניות וחיי לילה</div>
+    <h1>רומא, <em>ביחד</em></h1>
+    <p class="hero-sub">חמישה ימים בעיר הנצחית — פלאי העת העתיקה, הוותיקן, טיול יום לפירנצה, אוכל מדהים (בלי פירות ים), רחובות הקניות הכי טובים, ולילות תוססים ב-Trastevere, ב-Monti וב-Campo de' Fiori. מלון אחד מרכזי, בלי רכב — הכול ברגל, במטרו וברכבת מהירה.</p>
+    <div class="hero-facts">
+      <div class="fact"><span class="k">תאריכים</span><span class="v">20–25 באוק׳ 2026</span></div>
+      <div class="fact"><span class="k">מי</span><span class="v">2 אחיות · 18 ו-23</span></div>
+      <div class="fact"><span class="k">סגנון</span><span class="v">חופשת עיר · בלי רכב</span></div>
+      <div class="fact"><span class="k">טיול יום</span><span class="v">פירנצה ברכבת מהירה</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="block legend" id="overview">
+  <div class="wrap">
+    <div class="sec-label">איך לקרוא את התוכנית</div>
+    <h2>מלון אחד, בלי רכב, חמישה ימים מעולים</h2>
+    <p style="max-width:66ch;color:#dcc9b0;margin-top:14px">
+      אתן שוהות ב<b style="color:#fff">מלון מרכזי אחד</b> לאורך כל הטיול ולא צריכות רכב — מרכז רומא הליכתי, והמטרו והרכבות המהירות מכסים את השאר. כל יום משלב <b style="color:#fff">אתרים, אוכל מעולה, קניות וחיי לילה</b>, עם יום אחד בחוץ ב<b style="color:#fff">פירנצה</b>. הקישו על כל תמונה כדי לפתוח אותה ב-Google Maps, והשתמשו ב<b style="color:#fff">מפה החיה</b> לניווט GPS ו-Waze לכל עצירה.</p>
+    <div class="legend-grid">
+      <div class="legend-item"><span class="badge b-city">עיר</span><span class="desc">האתרים הגדולים — הקולוסיאום, הפנתאון, מזרקת טרווי, Piazza Navona — רובם ברגל.</span></div>
+      <div class="legend-item"><span class="badge b-culture">תרבות</span><span class="desc">רומא העתיקה והוותיקן — כדאי להזמין כרטיסים מראש (דלגו על התור).</span></div>
+      <div class="legend-item"><span class="badge b-food">אוכל</span><span class="desc">קלאסיקות רומיות — קרבונרה, cacio e pepe, פיצה, ג'לאטו. כל ההמלצות בלי פירות ים.</span></div>
+      <div class="legend-item"><span class="badge b-shop">🛍️ קניות</span><span class="desc">Via del Corso, בוטיקים ב-Prati, וינטג' ב-Monti, ועוד מרקטים ואאוטלט.</span></div>
+      <div class="legend-item"><span class="badge b-night">🌙 חיי לילה</span><span class="desc">אפריטיבו ב-19:00, ואז ברים ב-Trastevere, Campo de' Fiori ו-Monti.</span></div>
+      <div class="legend-item"><span class="badge b-daytrip">🚄 טיול יום</span><span class="desc">פירנצה בכ-1:20 שעות ברכבת מהירה — אמנות, שוק העור ואוכל טוסקני.</span></div>
+      <div class="legend-item"><span class="badge b-foot">🚶 ברגל</span><span class="desc">הרבה הליכה על מרצפות אבן — קחו נעליים נוחות.</span></div>
+    </div>
+    <div class="callout">
+      <h4>הבסיס שלכן — מלון אחד, בלב המרכז</h4>
+      <p><b>Hotel dei Borgognoni</b> (מומלץ) — מלון 4 כוכבים שקט ברחוב פנימי ב-Tridente, במרחק הליכה קצר גם מ-Spanish Steps וגם ממזרקת טרווי. נקי, בטוח, מרכזי, ותוסס מספיק כדי שהחזרה בלילה תהיה בסמטאות הומות ומוארות — אף פעם לא מבודד.</p>
+      <p>בלי רכב לאורך כל הטיול: הכול במרכז הליכתי, המטרו זול ופשוט, ופירנצה במרחק רכבת מהירה מ-Roma Termini.</p>
+    </div>
+  </div>
+</section>
+
+<article class="day" id="day1">
+  <div class="banner">
+    <img class="ph" alt="מזרקת טרווי, רומא" src="https://commons.wikimedia.org/wiki/Special:FilePath/Trevi%20Fountain%2C%20Rome%2C%20Italy%202%20-%20May%202007.jpg?width=1280" onerror="this.remove()">
+    <div class="banner-in"><div class="daytag"><span class="daynum">יום 1 · שלישי</span></div>
+      <h2>נחיתה והתאהבות במרכז</h2><div class="when">20 באוק׳ · צ'ק-אין · טרווי, הפנתאון וארוחה ראשונה</div></div>
+  </div>
+  <div class="wrap day-body">
+    <div class="daymeta"><span class="chip"><b>בסיס:</b> Hotel dei Borgognoni</span><span class="chip"><b>הגעה:</b> רכבת/מונית משדה התעופה</span><span class="badge b-city">עיר</span><span class="badge b-food">אוכל</span></div>
+    <div class="spine">
+      <div class="tblock"><div class="ttime">אחר הצהריים</div><div class="tcat">נחיתה וצ'ק-אין</div>
+        <h3>לנחות, להניח תיקים, לנשום רומא</h3>
+        <p>מ-Fiumicino אפשר לקחת את רכבת Leonardo Express ל-Termini (כ-32 דק') ואז מונית קצרה, או מונית במחיר קבוע ישר למלון (כ-€50). צ'ק-אין, להתרענן, ולצאת ישר אל ה-Tridente.</p>
+        <div class="badgerow"><span class="badge b-foot">🚶 ברגל</span></div>
+      </div>
+      <div class="tblock"><div class="ttime">לפנות ערב</div><div class="tcat">האייקונים הראשונים</div>
+        <h3>מזרקת טרווי, Spanish Steps והפנתאון</h3>
+        <p>סיבוב קל מהמלון: לזרוק מטבע במזרקת טרווי, לעלות ב-Spanish Steps, ואז לפנתאון — כניסה חינם, ומרהיב מבפנים. רומא בשעת הזהב.</p>
+        <div class="meta-line">🚶 <span>הכול במרחק 10–15 דק' ברגל</span></div>
+        <div class="badgerow"><span class="badge b-city">עיר</span></div>
+      </div>
+      <div class="tblock eve"><div class="ttime">ערב</div><div class="tcat">ארוחה ראשונה</div>
+        <h3>ארוחת ערב ליד הפנתאון</h3>
+        <p>הזמינו מראש ב-<b>Armando al Pantheon</b>, טרטוריה משפחתית קטנה עם קרבונרה מושלמת וקלאסיקות רומיות מ-1961. לסיים עם ג'לאטו ב-Giolitti מעבר לפינה.</p>
+        <div class="badgerow"><span class="badge b-food">אוכל</span></div>
+      </div>
+    </div>
+
+    <div class="subhead"><span class="sec-label">המלון · כל 5 הלילות</span></div>
+    <div class="cards">
+      <div class="card" data-map="Hotel dei Borgognoni Rome" data-book-label="🏨 פרטי המלון" data-book-url="https://www.google.com/maps/search/?api=1&query=Hotel%20dei%20Borgognoni%20Rome" data-book-note="מלון 4 כוכבים שקט ב-Tridente · בין Spanish Steps למזרקת טרווי · נקי, מרכזי, חזרה בטוחה בלילה">
+        <div class="imgwrap cphoto" data-map="Hotel dei Borgognoni Rome"><img loading="lazy" alt="רחוב במרכז רומא" src="https://commons.wikimedia.org/wiki/Special:FilePath/Via%20dei%20Condotti%20%28Rome%29.jpg?width=1000" onerror="this.remove()"></div>
+        <span class="kind">4 כוכבים · Tridente</span><h4>Hotel dei Borgognoni</h4>
+        <p>מלון 4 כוכבים שקט ונקי ברחוב פנימי בין Spanish Steps למזרקת טרווי — מרכזי לכל דבר, עם חזרה הביתה בלילה בסמטאות הומות ומוארות.</p>
+        <div class="addr"><b>Tridente, מרכז רומא</b><br>5 לילות · הליכה לכל האתרים</div>
+        <div class="badgerow"><span class="badge b-city">מרכזי</span></div>
+      </div>
+      <div class="card" data-map="Armando al Pantheon Rome" data-book-label="🍽 הזמנה / מפה" data-book-url="https://www.google.com/maps/search/?api=1&query=Armando%20al%20Pantheon%20Rome" data-book-note="טרטוריה משפחתית היסטורית ליד הפנתאון · קרבונרה · הזמינו מראש · בלי פירות ים">
+        <div class="imgwrap cphoto" data-map="Armando al Pantheon Rome"><img loading="lazy" alt="פסטה קרבונרה" src="https://commons.wikimedia.org/wiki/Special:FilePath/Espaguetis%20carbonara.jpg?width=1000" onerror="this.remove()"></div>
+        <span class="kind">טרטוריה · הפנתאון</span><h4>Armando al Pantheon</h4>
+        <p>מוסד רומי מ-1961 — קרבונרה, amatriciana, cacio e pepe, saltimbocca. קטן ואהוב, אז כדאי להזמין הרבה מראש.</p>
+        <div class="addr"><b>ליד הפנתאון</b><br>ארוחת ערב · להזמין מוקדם</div>
+        <div class="badgerow"><span class="badge b-food">אוכל</span></div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="day" id="day2">
+  <div class="banner">
+    <img class="ph" alt="הקולוסיאום והפורום הרומי" src="https://commons.wikimedia.org/wiki/Special:FilePath/Colosseo%202020.jpg?width=1280" onerror="this.remove()">
+    <div class="banner-in"><div class="daytag"><span class="daynum">יום 2 · רביעי</span></div>
+      <h2>רומא העתיקה וערב ב-Monti</h2><div class="when">21 באוק׳ · קולוסיאום, פורום, Palatine · חיי לילה ב-Monti</div></div>
+  </div>
+  <div class="wrap day-body">
+    <div class="daymeta"><span class="chip"><b>להזמין מראש:</b> כרטיס קולוסיאום עם שעה</span><span class="badge b-culture">תרבות</span><span class="badge b-city">עיר</span><span class="badge b-night">🌙 חיי לילה</span></div>
+    <div class="spine">
+      <div class="tblock"><div class="ttime">בוקר</div><div class="tcat">פלאי העת העתיקה</div>
+        <h3>קולוסיאום, הפורום הרומי וגבעת Palatine</h3>
+        <p>להתחיל מוקדם עם כרטיס קולוסיאום עם שעת כניסה (הזמינו אונליין — הוא מכסה גם את הפורום ו-Palatine). לשוטט בין חורבות הפורום ולעלות ל-Palatine לנוף על הכול.</p>
+        <div class="meta-line">🎟 <span>כרטיס משולב ≈ €18 · להזמין מראש</span></div>
+        <div class="badgerow"><span class="badge b-culture">תרבות</span></div>
+      </div>
+      <div class="tblock food"><div class="ttime">צהריים</div><div class="tcat">פסטה רומית</div>
+        <h3>צהריים ליד הפורום</h3>
+        <p>cacio e pepe ו-amatriciana במקום קלאסי, לפני טיול אחר הצהריים — Piazza Venezia, אנדרטת ויטוריאנו וסמטאות Monti.</p>
+        <div class="badgerow"><span class="badge b-food">אוכל</span></div>
+      </div>
+      <div class="tblock"><div class="ttime">אחר הצהריים</div><div class="tcat">שכונה + וינטג'</div>
+        <h3>לגלות את Monti</h3>
+        <p>השכונה הכי מגניבה ברומא — סמטאות אבן של חנויות וינטג' (Pifebo, Humana, King Size), בוטיקים עצמאיים ובתי קפה ב-Via del Boschetto וב-Via dei Serpenti.</p>
+        <div class="badgerow"><span class="badge b-shop">🛍️ קניות</span></div>
+      </div>
+      <div class="tblock night"><div class="ttime">ערב</div><div class="tcat">אפריטיבו וברים</div>
+        <h3>אפריטיבו וערב נינוח ב-Monti</h3>
+        <p>אפריטיבו בבר היין <b>Ai Tre Scalini</b>, ארוחה בסביבה, ואז דרינקים סביב Piazza della Madonna dei Monti — תוסס אבל קליל, מושלם לערב גדול ראשון.</p>
+        <div class="badgerow"><span class="badge b-night">🌙 חיי לילה</span></div>
+      </div>
+    </div>
+
+    <div class="subhead"><span class="sec-label">לאכול ולשתות · היום</span></div>
+    <div class="cards">
+      <div class="card" data-map="Hostaria Romana Rome" data-book-label="🍽 הזמנה / מפה" data-book-url="https://www.google.com/maps/search/?api=1&query=Hostaria%20Romana%20Rome" data-book-note="טרטוריה רומית אהובה בין טרווי למרכז · cacio e pepe, amatriciana · להזמין">
+        <div class="imgwrap cphoto" data-map="Hostaria Romana Rome"><img loading="lazy" alt="Cacio e pepe" src="https://commons.wikimedia.org/wiki/Special:FilePath/Cacio%20e%20pepe.jpg?width=1000" onerror="this.remove()"></div>
+        <span class="kind">טרטוריה · מרכז</span><h4>Hostaria Romana</h4>
+        <p>קלאסיקה רומית תוססת מאז שנות ה-60 — cacio e pepe אמיתי על tonnarello, amatriciana ובשרים בגריל. להזמין.</p>
+        <div class="addr"><b>ליד טרווי</b><br>צהריים או ערב</div>
+        <div class="badgerow"><span class="badge b-food">אוכל</span></div>
+      </div>
+      <div class="card" data-map="Ai Tre Scalini Monti Rome" data-book-label="🍷 בר יין / מפה" data-book-url="https://www.google.com/maps/search/?api=1&query=Ai%20Tre%20Scalini%20Via%20Panisperna%20Rome" data-book-note="בר יין נעים ב-Monti · אפריטיבו · תוסס אבל רגוע">
+        <div class="imgwrap cphoto" data-map="Ai Tre Scalini Monti Rome"><img loading="lazy" alt="אפריטיבו ברומא" src="https://commons.wikimedia.org/wiki/Special:FilePath/Aperol%20Spritz%20-%20Venezia.jpg?width=1000" onerror="this.remove()"></div>
+        <span class="kind">בר יין · Monti</span><h4>Ai Tre Scalini</h4>
+        <p>מוסד ב-Monti — בר יין מכוסה קיסוס שמלא מקומיים לאפריטיבו ולערבים קלילים.</p>
+        <div class="addr"><b>Monti · Via Panisperna</b><br>אפריטיבו · ערב</div>
+        <div class="badgerow"><span class="badge b-night">🌙 חיי לילה</span></div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="day" id="day3">
+  <div class="banner">
+    <img class="ph" alt="בזיליקת פטרוס הקדוש, הוותיקן" src="https://commons.wikimedia.org/wiki/Special:FilePath/Basilica%20di%20San%20Pietro%20in%20Vaticano%20September%202015-1a.jpg?width=1280" onerror="this.remove()">
+    <div class="banner-in"><div class="daytag"><span class="daynum">יום 3 · חמישי</span></div>
+      <h2>הוותיקן, קניות ב-Prati וערב ב-Trastevere</h2><div class="when">22 באוק׳ · St Peter's, הקפלה הסיסטינית · ארוחה וברים ב-Trastevere</div></div>
+  </div>
+  <div class="wrap day-body">
+    <div class="daymeta"><span class="chip"><b>להזמין מראש:</b> מוזיאוני הוותיקן עם שעה</span><span class="badge b-culture">תרבות</span><span class="badge b-shop">🛍️ קניות</span><span class="badge b-night">🌙 חיי לילה</span></div>
+    <div class="spine">
+      <div class="tblock"><div class="ttime">בוקר</div><div class="tcat">הוותיקן</div>
+        <h3>מוזיאוני הוותיקן, הקפלה הסיסטינית ו-St Peter's</h3>
+        <p>הזמינו כניסה עם שעה (פתוח בחמישי) ולכו מוקדם. המוזיאונים מובילים אל הקפלה הסיסטינית; ואז בזיליקת St Peter's (חינם) — מי שרוצה יכול לטפס לכיפה לנוף.</p>
+        <div class="meta-line">🎟 <span>מוזיאונים ≈ €20 · הזמינו אונליין, דלגו על התור</span></div>
+        <div class="badgerow"><span class="badge b-culture">תרבות</span></div>
+      </div>
+      <div class="tblock food"><div class="ttime">צהריים</div><div class="tcat">הפיצה המפורסמת</div>
+        <h3>Pizza al taglio ב-Pizzarium Bonci</h3>
+        <p>במרחק הליכה קצר מהוותיקן — הפיצה-במשקל הכי מפורסמת ברומא. קחו כמה חתיכות ותאכלו בעמידה, כמו מקומיים.</p>
+        <div class="badgerow"><span class="badge b-food">אוכל</span></div>
+      </div>
+      <div class="tblock"><div class="ttime">אחר הצהריים</div><div class="tcat">בוטיקים</div>
+        <h3>קניות ב-Via Cola di Rienzo</h3>
+        <p>רחוב הקניות האלגנטי של Prati — בוטיקים איטלקיים (Max Mara, Liu Jo), כלבו Coin ומותגים בטווח בינוני, רגוע יותר מהמרכז התיירותי.</p>
+        <div class="badgerow"><span class="badge b-shop">🛍️ קניות</span></div>
+      </div>
+      <div class="tblock night"><div class="ttime">ערב</div><div class="tcat">Trastevere</div>
+        <h3>ארוחה וברים ב-Trastevere</h3>
+        <p>לחצות את הנהר אל השכונה הכי אווירתית בלילה. ארוחה ב-<b>Tonnarello</b> (מנות ענק, תוסס), ואז קוקטיילים ב-<b>Freni e Frizioni</b> ודרינקים על מדרגות Piazza Trilussa.</p>
+        <div class="badgerow"><span class="badge b-night">🌙 חיי לילה</span><span class="badge b-food">אוכל</span></div>
+      </div>
+    </div>
+
+    <div class="subhead"><span class="sec-label">לאכול ולשתות · היום</span></div>
+    <div class="cards">
+      <div class="card" data-map="Pizzarium Bonci Rome" data-book-label="🍕 מפה" data-book-url="https://www.google.com/maps/search/?api=1&query=Pizzarium%20Bonci%20Rome" data-book-note="הפיצה al taglio המפורסמת ליד הוותיקן · במשקל · צהריים קליל">
+        <div class="imgwrap cphoto" data-map="Pizzarium Bonci Rome"><img loading="lazy" alt="פיצה רומית al taglio" src="https://commons.wikimedia.org/wiki/Special:FilePath/Pizza%20al%20taglio%20-%20Rome.jpg?width=1000" onerror="this.remove()"></div>
+        <span class="kind">פיצה · Prati</span><h4>Pizzarium Bonci</h4>
+        <p>הפיצה-בחיתוך האגדית של Gabriele Bonci — טופינגים יצירתיים, במשקל. צהריים מושלם ליד הוותיקן.</p>
+        <div class="addr"><b>ליד הוותיקן</b><br>צהריים · טייקאווי</div>
+        <div class="badgerow"><span class="badge b-food">אוכל</span></div>
+      </div>
+      <div class="card" data-map="Tonnarello Trastevere Rome" data-book-label="🍽 מפה" data-book-url="https://www.google.com/maps/search/?api=1&query=Tonnarello%20Trastevere%20Rome" data-book-note="מנות ענק, תוסס, אהוב על מטיילים צעירים · פסטה רומית · Trastevere">
+        <div class="imgwrap cphoto" data-map="Tonnarello Trastevere Rome"><img loading="lazy" alt="סמטת Trastevere בלילה" src="https://commons.wikimedia.org/wiki/Special:FilePath/Trastevere%20-%20Rome.jpg?width=1000" onerror="this.remove()"></div>
+        <span class="kind">טרטוריה · Trastevere</span><h4>Tonnarello</h4>
+        <p>צלחות גדולות של tonnarello cacio e pepe וקרבונרה, מוזיקה חיה בחלק מהערבים, תמיד שוקק — ארוחת ערב כיפית לשתיים.</p>
+        <div class="addr"><b>Trastevere</b><br>ערב · תוסס</div>
+        <div class="badgerow"><span class="badge b-food">אוכל</span></div>
+      </div>
+      <div class="card" data-map="Freni e Frizioni Trastevere Rome" data-book-label="🍸 מפה" data-book-url="https://www.google.com/maps/search/?api=1&query=Freni%20e%20Frizioni%20Rome" data-book-note="בר קוקטיילים אייקוני ב-Trastevere · אפריטיבו מעולה · קהל צעיר">
+        <div class="imgwrap cphoto" data-map="Freni e Frizioni Trastevere Rome"><img loading="lazy" alt="קוקטיילים" src="https://commons.wikimedia.org/wiki/Special:FilePath/Negroni%20cocktail.jpg?width=1000" onerror="this.remove()"></div>
+        <span class="kind">בר קוקטיילים · Trastevere</span><h4>Freni e Frizioni</h4>
+        <p>מוסך לשעבר שהפך לבר קוקטיילים אייקוני — מזנון אפריטיבו נדיב וקהל צעיר ותוסס שנשפך אל Piazza Trilussa.</p>
+        <div class="addr"><b>Trastevere</b><br>דרינקים · לילה</div>
+        <div class="badgerow"><span class="badge b-night">🌙 חיי לילה</span></div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="day" id="day4">
+  <div class="banner">
+    <img class="ph" alt="פירנצה — הדואומו והקו הרקיע" src="https://commons.wikimedia.org/wiki/Special:FilePath/Florence%20Duomo%20from%20Michelangelo%20hill.jpg?width=1280" onerror="this.remove()">
+    <div class="banner-in"><div class="daytag"><span class="daynum">יום 4 · שישי</span></div>
+      <h2>טיול יום לפירנצה</h2><div class="when">23 באוק׳ · רכבת מהירה ~1:20 · אמנות, שוק העור ואוכל טוסקני</div></div>
+  </div>
+  <div class="wrap day-body">
+    <div class="daymeta"><span class="chip"><b>רכבת:</b> Roma Termini → Firenze S.M.N.</span><span class="chip"><b>להזמין מראש:</b> כרטיסים + Uffizi/Accademia</span><span class="badge b-daytrip">🚄 טיול יום</span><span class="badge b-art">אמנות</span></div>
+    <div class="spine">
+      <div class="tblock"><div class="ttime">בוקר מוקדם</div><div class="tcat">רכבת מהירה</div>
+        <h3>Roma Termini → פירנצה בכ-1:20</h3>
+        <p>קחו רכבת מהירה מוקדמת Frecciarossa או Italo (להזמין מראש, כ-€20–45 לכיוון). תוך פחות מ-90 דקות אתן בלב פירנצה — בלי רכב.</p>
+        <div class="meta-line">🚄 <span>Frecciarossa / Italo · שריון מקומות</span></div>
+        <div class="badgerow"><span class="badge b-daytrip">🚄 טיול יום</span></div>
+      </div>
+      <div class="tblock"><div class="ttime">בוקר</div><div class="tcat">אייקוני הרנסאנס</div>
+        <h3>הדואומו, Ponte Vecchio והדוד</h3>
+        <p>הדואומו המפוספס וכיפתו, גשר חנויות הזהב Ponte Vecchio, ופסל הדוד של מיכלאנג'לו ב-Accademia (להזמין מראש). מי שאוהבת אמנות — להוסיף את Uffizi.</p>
+        <div class="badgerow"><span class="badge b-art">אמנות</span><span class="badge b-city">עיר</span></div>
+      </div>
+      <div class="tblock food"><div class="ttime">צהריים</div><div class="tcat">אוכל טוסקני</div>
+        <h3>Panini ושוק San Lorenzo</h3>
+        <p>קחו panino ממולא מפורסם ב-All'Antico Vinaio, ואז שוטטו בשוק העור San Lorenzo — הקניות הכי מוכרות של פירנצה לתיקים, ז'קטים ומתנות (מותר להתמקח).</p>
+        <div class="badgerow"><span class="badge b-food">אוכל</span><span class="badge b-shop">🛍️ קניות</span></div>
+      </div>
+      <div class="tblock"><div class="ttime">לפנות ערב</div><div class="tcat">הנוף</div>
+        <h3>Piazzale Michelangelo, ואז חזרה לרומא</h3>
+        <p>לעלות ל-Piazzale Michelangelo לקו הרקיע הקלאסי של פירנצה בשעת הזהב, ואז רכבת ערב חזרה לרומא — הביתה בזמן לג'לאטו לילה.</p>
+        <div class="badgerow"><span class="badge b-daytrip">🚄 טיול יום</span></div>
+      </div>
+    </div>
+
+    <div class="subhead"><span class="sec-label">פירנצה · כרטיסים ואוכל</span></div>
+    <div class="cards">
+      <div class="card" data-book-label="🚄 להזמין כרטיסי רכבת" data-book-url="https://www.italotreno.com/en/destinations-timetable/rome-florence-tickets" data-book-note="הזמינו כרטיסי רכבת מהירה רומא ⇄ פירנצה מוקדם למחיר הטוב ביותר (מ-~€20 לכיוון)">
+        <div class="imgwrap cphoto" data-map="Roma Termini station"><img loading="lazy" alt="רכבת מהירה" src="https://commons.wikimedia.org/wiki/Special:FilePath/Frecciarossa%201000%20Milano%20Centrale.jpg?width=1000" onerror="this.remove()"></div>
+        <span class="kind">רכבת · מהירה</span><h4>Frecciarossa / Italo</h4>
+        <p>Roma Termini → Firenze Santa Maria Novella בכ-1:20. הזמינו מראש ושריינו מקומות לשני הכיוונים.</p>
+        <div class="addr"><b>Termini ⇄ Firenze S.M.N.</b><br>~1:20 לכיוון</div>
+      </div>
+      <div class="card" data-map="All'Antico Vinaio Firenze" data-book-label="🥪 מפה" data-book-url="https://www.google.com/maps/search/?api=1&query=All%27Antico%20Vinaio%20Firenze" data-book-note="ה-panini הממולאים המפורסמים של פירנצה · מהיר, זול, מעולה · בלי פירות ים">
+        <div class="imgwrap cphoto" data-map="All'Antico Vinaio Firenze"><img loading="lazy" alt="פנינו פירנצה" src="https://commons.wikimedia.org/wiki/Special:FilePath/Schiacciata%20fiorentina.jpg?width=1000" onerror="this.remove()"></div>
+        <span class="kind">Panini · פירנצה</span><h4>All'Antico Vinaio</h4>
+        <p>חנות ה-panino האגדית של פירנצה — כריכי schiacciata ענקיים עם בשרים וגבינות טוסקניים. מהיר, זול ובלתי נשכח.</p>
+        <div class="addr"><b>מרכז פירנצה</b><br>צהריים על הדרך</div>
+        <div class="badgerow"><span class="badge b-food">אוכל</span></div>
+      </div>
+      <div class="card" data-map="San Lorenzo Market Florence leather" data-book-label="🛍️ מפה" data-book-url="https://www.google.com/maps/search/?api=1&query=San%20Lorenzo%20Market%20Florence" data-book-note="שוק העור המפורסם של פירנצה · תיקים, ז'קטים, מתנות · מותר להתמקח">
+        <div class="imgwrap cphoto" data-map="San Lorenzo Market Florence leather"><img loading="lazy" alt="מוצרי עור" src="https://commons.wikimedia.org/wiki/Special:FilePath/Leather%20bags%20at%20a%20market.jpg?width=1000" onerror="this.remove()"></div>
+        <span class="kind">שוק · פירנצה</span><h4>שוק העור San Lorenzo</h4>
+        <p>דוכני עור פלורנטיני — תיקים, חגורות, ז'קטים ומתנות. עצירת הקניות הקלאסית של העיר; המחירים נתונים למיקוח.</p>
+        <div class="addr"><b>מרכז פירנצה</b><br>אחר הצהריים · קניות</div>
+        <div class="badgerow"><span class="badge b-shop">🛍️ קניות</span></div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="day" id="day5">
+  <div class="banner">
+    <img class="ph" alt="Piazza Navona, רומא" src="https://commons.wikimedia.org/wiki/Special:FilePath/Piazza%20Navona%20Rome.jpg?width=1280" onerror="this.remove()">
+    <div class="banner-in"><div class="daytag"><span class="daynum">יום 5 · שבת</span></div>
+      <h2>כיכרות, קניות גדולות והלילה הכי טוב</h2><div class="when">24 באוק׳ · Navona, Campo de' Fiori, Via del Corso · ליל שבת</div></div>
+  </div>
+  <div class="wrap day-body">
+    <div class="daymeta"><span class="chip"><b>בסיס:</b> מרכז רומא</span><span class="badge b-shop">🛍️ קניות</span><span class="badge b-city">עיר</span><span class="badge b-night">🌙 חיי לילה</span></div>
+    <div class="spine">
+      <div class="tblock"><div class="ttime">בוקר</div><div class="tcat">רומא של גלויה</div>
+        <h3>Piazza Navona ו-Campo de' Fiori</h3>
+        <p>מזרקות בארוק ב-Piazza Navona, ואז שוק הבוקר ובתי הקפה של Campo de' Fiori. קפה וצפייה באנשים בפינה הכי יפה של העיר העתיקה.</p>
+        <div class="badgerow"><span class="badge b-city">עיר</span></div>
+      </div>
+      <div class="tblock"><div class="ttime">צהריים</div><div class="tcat">הקנייה הגדולה</div>
+        <h3>קניות ב-Via del Corso וב-Tridente</h3>
+        <p>רחוב הקניות הראשי של רומא נמתח מ-Piazza del Popolo ל-Piazza Venezia — Zara, H&amp;M, Mango ועוד, לצד חלונות הראווה היוקרתיים של Via dei Condotti ליד Spanish Steps.</p>
+        <div class="meta-line">🛍️ <span>Zara · H&amp;M · מותגים איטלקיים · חלונות ראווה</span></div>
+        <div class="badgerow"><span class="badge b-shop">🛍️ קניות</span></div>
+      </div>
+      <div class="tblock food"><div class="ttime">אחר הצהריים</div><div class="tcat">נוף וג'לאטו</div>
+        <h3>Villa Borghese ומרפסת Pincio</h3>
+        <p>לברוח מההמון בפארק הגדול של רומא — לשכור עגלת פדלים קטנה, ואז לצפות בשקיעה מעל הגגות ממרפסת Pincio שמעל Piazza del Popolo. ג'לאטו מ-Fatamorgana.</p>
+        <div class="badgerow"><span class="badge b-city">עיר</span><span class="badge b-food">אוכל</span></div>
+      </div>
+      <div class="tblock night"><div class="ttime">ערב</div><div class="tcat">ליל שבת</div>
+        <h3>הלילה הגדול האחרון — Campo de' Fiori</h3>
+        <p>ארוחה ב-<b>La Carbonara</b> ב-Campo de' Fiori (פועלת מ-1906), ואז הכיכר הופכת לאחד ממוקדי חיי הלילה התוססים של רומא — ברים, קהל צעיר ומוזיקה עד מאוחר.</p>
+        <div class="badgerow"><span class="badge b-night">🌙 חיי לילה</span><span class="badge b-food">אוכל</span></div>
+      </div>
+    </div>
+
+    <div class="subhead"><span class="sec-label">קניות ואוכל · היום</span></div>
+    <div class="cards">
+      <div class="card" data-map="Via del Corso Rome shopping" data-book-label="🛍️ מפה" data-book-url="https://www.google.com/maps/search/?api=1&query=Via%20del%20Corso%20Rome" data-book-note="רחוב הקניות הראשי של רומא · Zara, H&amp;M, Mango ועוד · מ-Piazza del Popolo ל-Piazza Venezia">
+        <div class="imgwrap cphoto" data-map="Via del Corso Rome shopping"><img loading="lazy" alt="רחוב קניות ברומא" src="https://commons.wikimedia.org/wiki/Special:FilePath/Via%20del%20Corso%20-%20Roma.jpg?width=1000" onerror="this.remove()"></div>
+        <span class="kind">רחוב ראשי · מרכז</span><h4>Via del Corso ו-Condotti</h4>
+        <p>עורק הקניות הראשי למותגי הרחוב, לצד בוטיקי היוקרה של Via dei Condotti ליד Spanish Steps.</p>
+        <div class="addr"><b>Tridente</b><br>צהריים · קניות</div>
+        <div class="badgerow"><span class="badge b-shop">🛍️ קניות</span></div>
+      </div>
+      <div class="card" data-map="La Carbonara Campo de Fiori Rome" data-book-label="🍽 מפה" data-book-url="https://www.google.com/maps/search/?api=1&query=La%20Carbonara%20Campo%20de%20Fiori%20Rome" data-book-note="טרטוריה היסטורית ב-Campo de' Fiori מ-1906 · קרבונרה · כיכר תוססת לערב">
+        <div class="imgwrap cphoto" data-map="La Carbonara Campo de Fiori Rome"><img loading="lazy" alt="Campo de' Fiori בלילה" src="https://commons.wikimedia.org/wiki/Special:FilePath/Campo%20de%27%20Fiori%20-%20Rome.jpg?width=1000" onerror="this.remove()"></div>
+        <span class="kind">טרטוריה · Campo de' Fiori</span><h4>La Carbonara</h4>
+        <p>בכיכר מאז 1906 — קרבונרה קלאסית ומנות רומיות, ואז יוצאים ישר אל סצנת הברים התוססת של Campo de' Fiori.</p>
+        <div class="addr"><b>Campo de' Fiori</b><br>ערב · ואז ברים</div>
+        <div class="badgerow"><span class="badge b-food">אוכל</span></div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="day" id="day6">
+  <div class="banner">
+    <img class="ph" alt="הפנתאון, רומא" src="https://commons.wikimedia.org/wiki/Special:FilePath/Pantheon%20Rome%20fa%C3%A7ade.jpg?width=1280" onerror="this.remove()">
+    <div class="banner-in"><div class="daytag"><span class="daynum">יום 6 · ראשון</span></div>
+      <h2>אספרסו אחרון וטיסה הביתה</h2><div class="when">25 באוק׳ · צ'ק-אאוט · טיול אחרון, ואז לשדה התעופה</div></div>
+  </div>
+  <div class="wrap day-body">
+    <div class="daymeta"><span class="chip"><b>צ'ק-אאוט</b> + שמירת מזוודות</span><span class="chip"><b>לשדה:</b> Leonardo Express / מונית</span><span class="badge b-city">עיר</span></div>
+    <div class="spine">
+      <div class="tblock"><div class="ttime">בוקר</div><div class="tcat">טעימה אחרונה</div>
+        <h3>צ'ק-אאוט, טיול אחרון</h3>
+        <p>להשאיר מזוודות במלון, קפוצ'ינו וקורנטו אחרונים, וסיבוב אחרון ואיטי — אולי שוב הפנתאון או סמטה אהובה — ועוד כמה מזכרות אחרונות.</p>
+        <div class="badgerow"><span class="badge b-food">אוכל</span></div>
+      </div>
+      <div class="tblock"><div class="ttime">צהריים</div><div class="tcat">יציאה</div>
+        <h3>ל-Fiumicino</h3>
+        <p>חזרה למלון למזוודות, ואז Leonardo Express מ-Termini (כ-32 דק') או מונית במחיר קבוע לשדה התעופה. Arrivederci, Roma!</p>
+        <div class="badgerow"><span class="badge b-foot">🚶 ברגל</span></div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<section class="block notes" id="notes">
+  <div class="wrap">
+    <div class="sec-label">לפני שיוצאים — מידע שימושי</div>
+    <h2>הערות מעשיות</h2>
+    <div class="notegrid">
+      <div class="note"><h4>המלון שלכן</h4>
+        <p><span class="flag">Hotel dei Borgognoni</span> (מומלץ) — מלון 4 כוכבים נקי ב-Tridente, בין Spanish Steps למזרקת טרווי. מרכזי, בטוח ואף פעם לא מבודד; החזרה בלילה בסמטאות הומות ומוארות. אשרו מחיר וזמינות בעת ההזמנה.</p></div>
+      <div class="note"><h4>תחבורה — בלי רכב</h4>
+        <p>המרכז הליכתי; המטרו והאוטובוסים זולים (כרטיס בודד €1.50, או כרטיס 48/72 שעות). משדה התעופה: <span class="flag">Leonardo Express</span> ל-Termini (~€14) או מונית במחיר קבוע (~€50 למרכז). פירנצה ברכבת מהירה מ-Termini.</p></div>
+      <div class="note"><h4>בטיחות בלילה</h4>
+        <p>מרכז רומא, Trastevere ו-Campo de' Fiori הומים ותוססים עד מאוחר — הישארו ברחובות ראשיים מוארים, שמרו על תיקים סגורים ומקדימה (כייסים עובדים בהמון ובמטרו), והשתמשו במוניות לבנות רשמיות או באפליקציה. חירום: <span class="flag">112</span>.</p></div>
+      <div class="note"><h4>אוכל — בלי פירות ים</h4>
+        <p>כל המסעדות כאן נבחרו לקלאסיקות רומיות — קרבונרה, cacio e pepe, amatriciana, פיצה, saltimbocca — אז קל לאכול מעולה <span class="flag">בלי פירות ים</span>. הזמינו את הטרטוריות הפופולריות כמה ימים מראש.</p></div>
+      <div class="note"><h4>להזמין מראש</h4>
+        <p><span class="flag">קולוסיאום</span> (כרטיס עם שעה), <span class="flag">מוזיאוני הוותיקן</span> (דלגו על התור), <span class="flag">רכבת לפירנצה + Uffizi/Accademia</span>, והטרטוריות הכי טובות. הזמנה אונליין חוסכת שעות בתור.</p></div>
+      <div class="note"><h4>כסף וטיפים</h4>
+        <p>איטליה משתמשת ב<span class="flag">אירו</span>; כרטיסים עובדים כמעט בכל מקום. הטיפ צנוע — לעגל למעלה או להשאיר אירו-שניים; שימו לב ל"coperto" (דמי כיסוי) ול"servizio" בחשבון. החזיקו קצת מזומן לשווקים ולג'לאטו.</p></div>
+      <div class="note"><h4>מזג אוויר וציוד</h4>
+        <p>סוף אוקטובר ברומא נעים — ימים ~19–22°C, ערבים קרירים ~11–13°C, מדי פעם ממטר. קחו שכבות, מעיל קל, מטרייה ו<span class="flag">נעליים נוחות</span> למרצפות.</p></div>
+      <div class="note"><h4>📱 התקנה כאפליקציה</h4>
+        <p>אפשר להוסיף את המדריך לטלפון: ב<span class="flag">אייפון</span> פותחים בספארי → שיתוף → "הוסף למסך הבית"; ב<span class="flag">אנדרואיד</span> בכרום → תפריט → "התקן אפליקציה". המסלול והתמונות זמינים גם בלי אינטרנט; המפה החיה דורשת חיבור.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="mono">רומא · 20–25 באוקטובר 2026 · שתי אחיות · מלון אחד · בלי רכב</div>
+  <p style="margin:10px 0 0">עיר · אוכל · קניות · חיי לילה · טיול יום לפירנצה</p>
+  <p style="margin:6px 0 0">תוכנית עבודה — מחירים, זמנים ושעות פתיחה לאישור בעת ההזמנה.</p>
+</footer>
+
+<script>
+  const links=[...document.querySelectorAll('.nav-links a')];
+  const secs=[...document.querySelectorAll('article.day, section#overview, section#notes')];
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){const id=e.target.id;links.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+id));}});},{rootMargin:'-45% 0px -50% 0px'});
+  secs.forEach(s=>io.observe(s));
+  const rev=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');rev.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>rev.observe(el));
+
+  const GMAP=q=>'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q);
+
+  document.querySelectorAll('.imgwrap').forEach((w)=>{
+    const q=w.getAttribute('data-map');
+    if(q){
+      const a=document.createElement('a');
+      a.href=GMAP(q); a.target='_blank'; a.rel='noopener'; a.className='maplink';
+      a.setAttribute('aria-label','הצג את '+q+' במפה');
+      while(w.firstChild){a.appendChild(w.firstChild);}
+      const pill=document.createElement('span');
+      pill.className='mappill'; pill.textContent='📍 הצג במפה';
+      a.appendChild(pill);
+      w.appendChild(a);
+    }
+  });
+
+  document.querySelectorAll('[data-book-url]').forEach((host)=>{
+    const label=host.getAttribute('data-book-label')||'פתח';
+    const url=host.getAttribute('data-book-url');
+    const note=host.getAttribute('data-book-note');
+    if(note){const n=document.createElement('div');n.className='booknote';n.innerHTML=note;host.appendChild(n);}
+    const btn=document.createElement('a');
+    btn.href=url; btn.target='_blank'; btn.rel='noopener'; btn.className='btn'; btn.textContent=label;
+    host.appendChild(btn);
+  });
+</script>
+<a class="langfab" href="index.html" aria-label="Switch to English">🌐 EN</a>
+<script>var TRIP={start:"2026-10-20",days:6,todayLabel:'היום'};</script>
+<script>(function(){try{var st=new Date(TRIP.start+"T00:00:00"),td=new Date();td.setHours(0,0,0,0);var df=Math.round((td-st)/86400000);if(df>=0&&df<TRIP.days){var el=document.getElementById("day"+(df+1));if(el){el.classList.add("is-today");var h=el.querySelector(".banner h2")||el.querySelector("h2");if(h){var t=document.createElement("span");t.className="todaytag";t.textContent=TRIP.todayLabel;h.appendChild(t);}if(!location.hash){setTimeout(function(){el.scrollIntoView({behavior:"smooth",block:"start"});},500);}}}}catch(e){}})();</script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("sw.js").catch(function(){});});}</script>
+</body>
+</html>

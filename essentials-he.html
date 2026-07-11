@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>מדריך כיס · רומא 2026</title>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#5E1F2D">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="רומא">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800&family=Frank+Ruhl+Libre:wght@500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{--wine:#5E1F2D;--gold:#C9A227;--gold-deep:#a8871c;--terra:#C0492E;--olive:#6B7A4F;
+    --parchment:#F5EEE1;--ink:#241c15;--muted:#6a5d4e;--line:#ddd0b8;--card:#fffdf6;
+    --shadow:0 1px 2px rgba(60,26,20,.06),0 8px 28px rgba(60,26,20,.10)}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--parchment);color:var(--ink);font-family:"Heebo",system-ui,sans-serif;font-size:17px;line-height:1.7}
+  h1,h2,h3,h4{font-family:"Frank Ruhl Libre",Georgia,serif;margin:0;line-height:1.25}
+  .mono{font-family:"Space Mono","Heebo",monospace}
+  a{color:var(--olive)}
+  .nav{position:sticky;top:0;z-index:50;background:rgba(94,31,45,.97);backdrop-filter:blur(6px);border-bottom:1px solid rgba(201,162,39,.25)}
+  .nav-inner{max-width:920px;margin:0 auto;padding:11px 20px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+  .brand{color:var(--parchment);font-family:"Frank Ruhl Libre",serif;font-weight:700;font-size:19px}
+  .brand b{color:var(--gold)}
+  .nav-links{display:flex;gap:4px;flex-wrap:wrap;margin-inline-start:auto}
+  .nav-links a{color:#e8d9c4;text-decoration:none;font-size:13.5px;font-weight:600;padding:6px 11px;border-radius:999px}
+  .nav-links a:hover{background:var(--gold);color:var(--wine)}
+  .nav-links a.home{background:var(--olive);color:#fff}
+  .wrap{max-width:920px;margin:0 auto;padding:30px 22px 60px}
+  .lead{font-size:18px;color:#33302a;max-width:60ch;margin:0 0 26px}
+  h1.title{font-size:clamp(30px,6vw,44px);margin:0 0 6px}
+  .sub{font-family:"Space Mono","Heebo",monospace;font-size:13px;color:var(--terra);letter-spacing:.5px;margin-bottom:18px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 22px;box-shadow:var(--shadow)}
+  .card h3{font-size:21px;margin-bottom:4px;display:flex;align-items:center;gap:9px}
+  .card .hint{font-size:13.5px;color:var(--muted);margin:0 0 12px}
+  ul.list{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+  ul.list li{display:flex;gap:10px;align-items:flex-start;font-size:15.5px}
+  ul.list li::before{content:"▢";color:var(--gold-deep);flex:none;font-size:14px;line-height:1.55}
+  .phr{display:grid;gap:9px;margin:0;padding:0;list-style:none}
+  .phr li{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed var(--line);padding-bottom:7px;font-size:15.5px}
+  .phr .x{color:var(--muted)}
+  .phr .y{font-weight:700}
+  .kv{display:grid;gap:7px;margin:0;padding:0;list-style:none;font-size:15.5px}
+  .kv li{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed var(--line);padding-bottom:6px}
+  .kv b{font-family:"Space Mono","Heebo",monospace;color:var(--wine)}
+  .emerg{background:var(--terra);color:#fff;border-color:#8c2f1f}
+  .emerg h3{color:#fff}.emerg .hint{color:#ffe2da}
+  .emerg .kv li{border-color:rgba(255,255,255,.35)}
+  .emerg .kv b{color:#fff;font-size:18px}
+  .emerg a{color:#fff;font-weight:700}
+  .qrcard{text-align:center}
+  .qrcard img{width:190px;height:190px;margin:8px auto;border:1px solid var(--line);border-radius:12px;background:#fff}
+  .toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 24px}
+  .tbtn{font-family:"Space Mono","Heebo",monospace;font-size:13px;font-weight:700;cursor:pointer;text-decoration:none;
+    background:var(--wine);color:#fff;border:1px solid var(--wine);border-radius:10px;padding:9px 14px}
+  .tbtn:hover{background:var(--gold);color:var(--wine);border-color:var(--gold)}
+  footer{background:#2a1119;color:#b89a7d;text-align:center;padding:28px 22px;font-size:13px}
+  footer .mono{color:var(--gold)}
+  .wxloc{font-family:"Space Mono","Heebo",monospace;font-size:12px;font-weight:700;color:var(--terra);margin:10px 0 4px}
+  .wxd{display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px dashed var(--line);font-size:14.5px}
+  .wxdt{flex:1;color:var(--ink)}
+  .wxic{font-size:18px}
+  .wxtemp{font-family:"Space Mono","Heebo",monospace;font-weight:700;color:var(--wine);white-space:nowrap}
+  .wxpr{font-family:"Space Mono","Heebo",monospace;font-size:12px;color:var(--olive);min-width:48px;text-align:end}
+  #wxlive .hint{margin:0 0 6px}
+  @media print{
+    .nav,.toolbar,footer,.qrcard{display:none!important}
+    body{background:#fff;font-size:12pt}
+    .card{box-shadow:none;border:1px solid #bbb;break-inside:avoid;page-break-inside:avoid}
+    .wrap{max-width:none;padding:0}
+  }
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="brand">מדריך כיס <b>·</b> רומא</div>
+    <div class="nav-links">
+      <a class="home" href="index-he.html">→ חזרה למסלול</a>
+      <a href="essentials.html">EN</a>
+      <a href="map.html">🗺️ מפה</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+  <h1 class="title">מדריך כיס</h1>
+  <div class="sub">רומא · 20–25 באוק׳ 2026 · עובד גם בלי אינטרנט</div>
+  <p class="lead">כל מה שכדאי לדעת לפני שיוצאים ובמהלך הדרך — רשימת ציוד, מסמכים, כסף, מזג אוויר, מילים שימושיות ומספרי חירום. הדף נשמר במכשיר ויהיה זמין גם בלי קליטה.</p>
+
+  <div class="toolbar">
+    <a class="tbtn" href="index-he.html">→ המסלול המלא</a>
+    <a class="tbtn" href="map.html">🗺️ מפה חיה</a>
+  </div>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>🧳 רשימת ציוד</h3>
+      <p class="hint">סוף אוקטובר — ימים נעימים, ערבים קרירים</p>
+      <ul class="list">
+        <li>נעלי הליכה נוחות (הרבה מרצפות אבן)</li>
+        <li>שכבות + מעיל קל לערבים</li>
+        <li>מטרייה מתקפלת / שכבת גשם קלה</li>
+        <li>לוק אחד קצת יותר מהודר לערבים בחוץ</li>
+        <li>משקפי שמש וצעיף</li>
+        <li>תיק צד שנסגר (בטוח מכייסים)</li>
+        <li>בקבוק מים רב-פעמי (יש ברזיות ציבוריות!)</li>
+        <li>מטען נייד + כבלים</li>
+        <li>מתאם חשמל (איטליה: תקע C / F / L)</li>
+        <li>קצת מזומן באירו לשווקים ולג'לאטו</li>
+        <li>כתפיים מכוסות לכנסיות (קוד לבוש בוותיקן)</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>📄 מסמכים</h3>
+      <p class="hint">לבדוק שבוע לפני הטיסה</p>
+      <ul class="list">
+        <li>דרכונים בתוקף (לפחות 6 חודשים מעבר לחזרה)</li>
+        <li>ביטוח נסיעות ובריאות (מספר פוליסה שמור)</li>
+        <li>אישור טיסה + פרטי חזרה</li>
+        <li>מלון: Hotel dei Borgognoni, Tridente, רומא</li>
+        <li>כרטיסי קולוסיאום ומוזיאוני הוותיקן (עם שעה)</li>
+        <li>כרטיסי רכבת רומא ⇄ פירנצה + Uffizi/Accademia</li>
+        <li>עותקים דיגיטליים של הכול בטלפונים</li>
+        <li>אנשי קשר לחירום ולביטוח</li>
+      </ul>
+    </div>
+
+    <div class="card" id="wxcard">
+      <h3>🌤️ מזג אוויר</h3>
+      <p class="hint">סוף אוקטובר · תחזית חיה</p>
+      <div id="wxlive"><p class="hint">טוען תחזית חיה…</p></div>
+      <p class="hint" style="margin:14px 0 4px;font-weight:700;color:var(--ink)">טיפוסי לעונה</p>
+      <ul class="kv">
+        <li><span>רומא — יום</span> <b>19–22°C</b></li>
+        <li><span>רומא — ערב</span> <b>11–13°C</b></li>
+        <li><span>פירנצה</span> <b>מעט קריר יותר</b></li>
+        <li><span>גשם</span> <b>ממטרים מזדמנים</b></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>💶 כסף וטיפים</h3>
+      <p class="hint">המטבע: אירו (€)</p>
+      <ul class="kv">
+        <li><span>מטבע</span> <b>אירו €</b></li>
+        <li><span>כרטיסי אשראי</span> <b>מתקבלים כמעט בכל מקום</b></li>
+        <li><span>מזומן</span> <b>שימושי לשווקים ולג'לאטו</b></li>
+        <li><span>"coperto"</span> <b>דמי כיסוי קטנים זה רגיל</b></li>
+        <li><span>טיפ</span> <b>צנוע — לעגל / €1–2</b></li>
+        <li><span>כספומטים</span> <b>של בנק; סרבו ל"המרה"</b></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>🗣️ מילים שימושיות</h3>
+      <p class="hint">איטלקית</p>
+      <ul class="phr">
+        <li><span class="y">שלום / בוקר טוב</span> <span class="x">Ciao / Buongiorno</span></li>
+        <li><span class="y">ערב טוב</span> <span class="x">Buonasera</span></li>
+        <li><span class="y">תודה</span> <span class="x">Grazie · גְרַאצְיֶה</span></li>
+        <li><span class="y">בבקשה</span> <span class="x">Per favore</span></li>
+        <li><span class="y">כן / לא</span> <span class="x">Sì / No</span></li>
+        <li><span class="y">סליחה</span> <span class="x">Scusi · סְקוּזִי</span></li>
+        <li><span class="y">כמה זה עולה?</span> <span class="x">Quanto costa?</span></li>
+        <li><span class="y">מים</span> <span class="x">Acqua · אַקְווָה</span></li>
+        <li><span class="y">החשבון, בבקשה</span> <span class="x">Il conto, per favore</span></li>
+        <li><span class="y">לחיים!</span> <span class="x">Salute!</span></li>
+      </ul>
+    </div>
+
+    <div class="card emerg">
+      <h3>🚨 מספרי חירום</h3>
+      <p class="hint">שמרו זמין — לחיצה מחייגת</p>
+      <ul class="kv">
+        <li><span>חירום כללי (אירופי)</span> <a href="tel:112"><b>112</b></a></li>
+        <li><span>משטרה</span> <a href="tel:113"><b>113</b></a></li>
+        <li><span>אמבולנס</span> <a href="tel:118"><b>118</b></a></li>
+        <li><span>מכבי אש</span> <a href="tel:115"><b>115</b></a></li>
+      </ul>
+    </div>
+
+    <div class="card qrcard">
+      <h3 style="justify-content:center">📲 שיתוף והתקנה</h3>
+      <p class="hint">סרקו כדי לפתוח את המדריך בטלפון נוסף</p>
+      <img src="qr-install.png" alt="קוד QR להתקנת המדריך">
+      <p class="hint" style="margin-top:10px">להתקנה כאפליקציה: אייפון → ספארי → שיתוף → "הוסף למסך הבית". אנדרואיד → כרום → תפריט → "התקן אפליקציה".</p>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="mono">רומא · מדריך כיס · 2026</div>
+  <p style="margin:8px 0 0">זמין גם בלי אינטרנט · זמנים ומחירים לאישור בעת ההזמנה</p>
+</footer>
+<script>
+(function(){
+ var WX={locs:[{n:"רומא",lat:41.9028,lon:12.4964},{n:"פירנצה",lat:43.7696,lon:11.2558}],start:"2026-10-20",end:"2026-10-25"};
+ var L={locale:'he',future:'תחזית יומית מדויקת תופיע כשבועיים לפני הטיול. מזג האוויר כרגע:',nowIn:'כרגע ב{c}',unavail:'אין חיבור לתחזית — ראו ממוצעים עונתיים למטה.'};
+ var WMO={0:'☀️',1:'🌤️',2:'⛅',3:'☁️',45:'🌫️',48:'🌫️',51:'🌦️',53:'🌦️',55:'🌦️',56:'🌧️',57:'🌧️',61:'🌧️',63:'🌧️',65:'🌧️',66:'🌧️',67:'🌧️',71:'🌨️',73:'🌨️',75:'❄️',77:'🌨️',80:'🌦️',81:'🌦️',82:'⛈️',85:'🌨️',86:'❄️',95:'⛈️',96:'⛈️',99:'⛈️'};
+ var box=document.getElementById('wxlive'); if(!box) return;
+ function ico(c){return WMO[c]||'•';}
+ function fmtDay(iso){var d=new Date(iso+'T00:00:00');return d.toLocaleDateString(L.locale,{weekday:'short',day:'numeric',month:'short'});}
+ function rows(loc,t){var r=t.time.map(function(iso,i){return '<div class="wxd"><span class="wxdt">'+fmtDay(iso)+'</span><span class="wxic">'+ico(t.code[i])+'</span><span class="wxtemp">'+Math.round(t.tmax[i])+'° / '+Math.round(t.tmin[i])+'°</span><span class="wxpr">'+(t.prc[i]!=null?('💧'+t.prc[i]+'%'):'')+'</span></div>';}).join('');return '<div class="wxloc">'+loc.n+'</div>'+r;}
+ function base(loc){return 'https://api.open-meteo.com/v1/forecast?latitude='+loc.lat+'&longitude='+loc.lon+'&daily=weathercode,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=auto';}
+ function get(loc){
+  return fetch(base(loc)+'&start_date='+WX.start+'&end_date='+WX.end).then(function(r){return r.json();}).then(function(d){
+   if(d&&d.daily&&d.daily.time&&d.daily.temperature_2m_max&&d.daily.temperature_2m_max.some(function(v){return v!=null;})){
+    return {mode:'f',loc:loc,t:{time:d.daily.time,tmax:d.daily.temperature_2m_max,tmin:d.daily.temperature_2m_min,prc:d.daily.precipitation_probability_max,code:d.daily.weathercode}};
+   }
+   return fetch(base(loc)+'&current=temperature_2m,weather_code&forecast_days=1').then(function(r){return r.json();}).then(function(c){return {mode:'c',loc:loc,cur:(c&&c.current)?c.current:null};});
+  });
+ }
+ Promise.all(WX.locs.map(get)).then(function(res){
+  var anyF=res.some(function(x){return x.mode==='f';}), html='';
+  if(anyF){ html=res.map(function(x){return x.mode==='f'?rows(x.loc,x.t):('<div class="wxloc">'+x.loc.n+'</div>');}).join(''); }
+  else {
+   html='<p class="hint">'+L.future+'</p>';
+   html+=res.map(function(x){ if(x.cur){return '<div class="wxd"><span class="wxdt">'+x.loc.n+'</span><span class="wxic">'+ico(x.cur.weather_code)+'</span><span class="wxtemp">'+Math.round(x.cur.temperature_2m)+'°</span></div>';} return ''; }).join('');
+  }
+  box.innerHTML=html||('<p class="hint">'+L.unavail+'</p>');
+ }).catch(function(){ box.innerHTML='<p class="hint">'+L.unavail+'</p>'; });
+})();
+</script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("sw.js").catch(function(){});});}</script>
+</body>
+</html>
