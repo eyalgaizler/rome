@@ -1,5 +1,5 @@
 // Rome trip — service worker v1 (offline app shell + offline map tiles)
-const CORE = 'rome-core-v1';
+const CORE = 'rome-core-v2';
 const RUNTIME = 'rome-runtime-v1';
 const TILES = 'rome-tiles-v1';
 const KEEP = [CORE, RUNTIME, TILES];
