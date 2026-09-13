@@ -171,6 +171,79 @@
     .note,.callout{background:#f3f3f3!important;border:1px solid #ccc!important}
     a{color:#000!important}
   }
+
+  /* --- THE HOTEL --- */
+  .htl{background:linear-gradient(180deg,#ece1cd,#F5EEE1);border-top:1px solid var(--line)}
+  .htl .lede{max-width:64ch;font-size:16.5px;color:#33291f;margin:14px 0 0}
+  .htlchips{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 4px}
+  .htlchip{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 13px;font-size:13.5px;box-shadow:var(--shadow);white-space:nowrap}
+  .htlchip b{font-family:"Space Mono",ui-monospace,monospace;font-size:12.5px;color:var(--terra)}
+  .htlchip.score{background:var(--wine);border-color:var(--wine);color:#fff}
+  .htlchip.score b{color:var(--gold)}
+
+  .htlgal{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:96px;gap:9px;margin-top:22px}
+  .htlgal button{padding:0;border:0;cursor:pointer;display:block;overflow:hidden;border-radius:13px;position:relative;
+    background:linear-gradient(135deg,#8a5a3c,#4a2019);box-shadow:var(--shadow)}
+  .htlgal button img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+  .htlgal button:hover img,.htlgal button:focus-visible img{transform:scale(1.06)}
+  .htlgal button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+  .htlgal .cap{position:absolute;left:0;right:0;bottom:0;z-index:2;text-align:start;
+    font-family:"Space Mono",ui-monospace,monospace;font-size:10.5px;letter-spacing:.4px;color:#fff;
+    padding:16px 10px 7px;background:linear-gradient(180deg,transparent,rgba(36,20,14,.85))}
+  .htlgal .g-hero{grid-column:span 6;grid-row:span 2}
+  .htlgal .g-half{grid-column:span 3}
+  .htlgal .g-third{grid-column:span 2}
+
+  .htlgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(266px,1fr));gap:16px;margin-top:26px;align-items:start}
+  .htlcard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px 17px;box-shadow:var(--shadow)}
+  .htlcard.wide{grid-column:1/-1}
+  .htlcard h4{font-size:18.5px;margin:4px 0 10px}
+  .htlcard .kind{font-family:"Space Mono",ui-monospace,monospace;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
+  .htlcard p{margin:0 0 10px;font-size:14.5px;color:#3b3025}
+  .htlcard p:last-child{margin-bottom:0}
+  .hdl{display:grid;gap:8px;margin:0}
+  .hdl div{display:flex;gap:12px;align-items:baseline;font-size:14.5px;border-bottom:1px dashed var(--line);padding-bottom:7px}
+  .hdl div:last-child{border-bottom:0;padding-bottom:0}
+  .hdl dt{flex:none;min-width:104px;font-family:"Space Mono",ui-monospace,monospace;font-size:11.5px;letter-spacing:.6px;
+    text-transform:uppercase;color:var(--muted)}
+  .hdl dd{margin:0;font-weight:600;color:var(--ink)}
+  .hdl dd small{display:block;font-weight:400;font-size:12.5px;color:var(--muted);letter-spacing:0;text-transform:none;font-family:"Hanken Grotesk",system-ui,sans-serif}
+  .hdl dd.sub{font-weight:400;color:var(--muted)}
+  .htlcard .total{font-family:"Space Mono",ui-monospace,monospace;font-size:19px;font-weight:700;color:var(--wine)}
+  .htl-flag{background:#fbeee9;border:1px solid #e7c0b1;border-radius:13px;padding:14px 17px;margin-top:16px}
+  .htl-flag h4{font-size:16px;color:var(--terra);margin:0 0 8px}
+  .htl-flag ul{margin:0;padding-inline-start:20px}
+  .htl-flag li{font-size:14px;color:#4a382f;margin-bottom:6px}
+  .htl-flag li:last-child{margin-bottom:0}
+  .tel{font-family:"Space Mono",ui-monospace,monospace;font-size:13.5px;text-decoration:none;border-bottom:1px solid var(--line)}
+  .tel:hover{border-bottom-color:var(--terra);color:var(--terra)}
+  .htl .btn.ghost{background:transparent;color:var(--wine);border-color:var(--line)}
+  .htl .btn.ghost:hover{background:var(--wine);color:#fff;border-color:var(--wine)}
+
+  /* lightbox */
+  .lb{position:fixed;inset:0;z-index:200;background:rgba(30,14,10,.94);display:none;align-items:center;justify-content:center;padding:28px}
+  .lb.open{display:flex}
+  .lb img{max-width:min(1100px,94vw);max-height:82vh;width:auto;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+  .lb .lbcap{position:absolute;left:0;right:0;bottom:24px;text-align:center;color:#f0e6d8;
+    font-family:"Space Mono",ui-monospace,monospace;font-size:13px;letter-spacing:.5px}
+  .lb button{position:absolute;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);color:#fff;
+    width:46px;height:46px;border-radius:50%;font-size:21px;cursor:pointer;line-height:1;display:grid;place-items:center;transition:.18s}
+  .lb button:hover{background:var(--gold);color:var(--wine);border-color:var(--gold)}
+  .lb .lbx{top:20px;right:20px}
+  .lb .lbp{left:18px;top:50%;transform:translateY(-50%)}
+  .lb .lbn{right:18px;top:50%;transform:translateY(-50%)}
+
+  @media (max-width:760px){
+    .htlgal{grid-template-columns:repeat(2,1fr);grid-auto-rows:120px}
+    .htlgal .g-hero{grid-column:span 2;grid-row:span 2}
+    .htlgal .g-half{grid-column:span 2;grid-row:span 1}
+    .htlgal .g-third{grid-column:span 1;grid-row:span 1}
+    .lb button{width:40px;height:40px}
+  }
+  @media print{
+    .htlgal button:nth-child(n+4){display:none}
+    .lb{display:none!important}
+  }
 </style>
 </head>
 <body>
@@ -179,7 +252,7 @@
   <div class="nav-inner">
     <div class="brand">רומא <b>·</b> <span class="mono" style="font-size:14px">20–25 אוק׳</span></div>
     <div class="nav-links"><a href="essentials-he.html">🧳 מדריך כיס</a>
-      <a href="#overview">סקירה</a><a href="map.html" style="background:var(--olive);color:#fff">🗺️ מפה חיה</a><a href="#day1">1</a><a href="#day2">2</a><a href="#day3">3</a>
+      <a href="#overview">סקירה</a><a href="#hotel">🏨 מלון</a><a href="map.html" style="background:var(--olive);color:#fff">🗺️ מפה חיה</a><a href="#day1">1</a><a href="#day2">2</a><a href="#day3">3</a>
       <a href="#day4">4</a><a href="#day5">5</a><a href="#day6">יציאה</a><a href="#notes">הערות</a>
     </div>
   </div>
@@ -216,9 +289,150 @@
       <div class="legend-item"><span class="badge b-foot">🚶 ברגל</span><span class="desc">הרבה הליכה על מרצפות אבן — קחו נעליים נוחות.</span></div>
     </div>
     <div class="callout">
-      <h4>הבסיס שלכן — שני חדרים מוזמנים, ביטול חינם</h4>
-      <p><b>אופציה 1 — Hotel Virgilio (Monti)</b> (מוזמן ✓) — מלון מדורג היטב (4.3★, 1,173 ביקורות) עם קבלה מאוישת 24 שעות, חדרים מרווחים ונקיים וצוות מקצועי, ברחוב שקט במרכז Monti. הליכה לקולוסיאום, לטרווי, לפנתאון ולתחנה. ₪4,483 לחדר ל-5 לילות (~₪2,242 לאחת).<br><br><b>אופציה 2 — The Spanish Suite, Campo de' Fiori</b> (מוזמן ✓, גיבוי) — נקי ומרכזי ב-Piazza Cairoli השקטה, מרחק הליכה קצר מחיי הלילה של Trastevere; מארח נחמד בוואטסאפ עם צ'ק-אין מאוחר. ₪4,045 ל-5 לילות (~₪2,023 לאחת). לשניהם ביטול חינם עד 13 באוק׳.</p>
+      <h4>הבסיס שלכן — Hotel Virgilio, Monti</h4>
+      <p><b>Hotel Virgilio (Monti)</b> (מוזמן ✓) — מלון מדורג היטב עם קבלה מאוישת 24 שעות, חדרים מרווחים ונקיים וצוות מקצועי, ברחוב שקט במרכז Monti. הליכה לקולוסיאום, לטרווי, לפנתאון ולתחנה. חדר זוגי קלאסי אחד ל-5 לילות — 1,290.36 אירו הכול כלול, בערך 645 אירו לאחת. ביטול חינם עד 14 באוק׳. <a href="#hotel">כל הפרטים למטה ↓</a></p>
       <p>בלי רכב לאורך כל הטיול: הכול במרכז הליכתי, והמטרו זול ופשוט למרחקים הארוכים יותר.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- THE HOTEL -->
+<section class="block htl" id="hotel">
+  <div class="wrap">
+    <div class="sec-label">איפה אתן ישנות</div>
+    <h2>Hotel Virgilio</h2>
+    <p class="lede">הבסיס שלכן לכל חמשת הלילות — מלון שלושה כוכבים בבניין מהמאה ה-19, ברחוב שקט ברובע מונטי,
+      ברחוב Via Palermo 30. חדר זוגי קלאסי אחד לשתיכן, עם המיטה הזוגית הגדולה שביקשתן. דלפק הקבלה מאויש מסביב לשעון,
+      וזה מה שהופך גם נחיתה ב-14:00 וגם חזרה מאוחרת בלילה לפשוטות באותה מידה.</p>
+
+    <div class="htlchips">
+      <span class="htlchip"><b>5</b> לילות · <b>2</b> מבוגרות</span>
+      <span class="htlchip">חדר זוגי קלאסי</span>
+      <span class="htlchip">מיטה זוגית גדולה</span>
+      <span class="htlchip">קבלה <b>24</b> שעות</span>
+      <span class="htlchip">מזגן · טלוויזיה</span>
+      <span class="htlchip">מעלית</span>
+      <span class="htlchip">ארוחת בוקר 12 אירו לאדם (בתוספת)</span>
+      <span class="htlchip score"><b>8.7</b>/10 · מיקום <b>9.4</b></span>
+    </div>
+
+    <div class="htlgal">
+      <button type="button" class="g-hero" data-src="hotel/facade.jpg" data-cap="Via Palermo 30 — הכניסה">
+        <img loading="lazy" src="hotel/facade.jpg" alt="Via Palermo 30 — הכניסה">
+        <span class="cap">Via Palermo 30 — הכניסה</span>
+      </button>
+      <button type="button" class="g-half" data-src="hotel/room-double.jpg" data-cap="חדר זוגי קלאסי">
+        <img loading="lazy" src="hotel/room-double.jpg" alt="חדר זוגי קלאסי">
+        <span class="cap">חדר זוגי קלאסי</span>
+      </button>
+      <button type="button" class="g-half" data-src="hotel/room-desk.jpg" data-cap="שולחן וחלון">
+        <img loading="lazy" src="hotel/room-desk.jpg" alt="שולחן וחלון">
+        <span class="cap">שולחן וחלון</span>
+      </button>
+      <button type="button" class="g-third" data-src="hotel/reception.jpg" data-cap="הקבלה — מאוישת 24 שעות">
+        <img loading="lazy" src="hotel/reception.jpg" alt="הקבלה — מאוישת 24 שעות">
+        <span class="cap">הקבלה — מאוישת 24 שעות</span>
+      </button>
+      <button type="button" class="g-third" data-src="hotel/breakfast.jpg" data-cap="חדר ארוחות הבוקר">
+        <img loading="lazy" src="hotel/breakfast.jpg" alt="חדר ארוחות הבוקר">
+        <span class="cap">חדר ארוחות הבוקר</span>
+      </button>
+      <button type="button" class="g-third" data-src="hotel/stairs.jpg" data-cap="גרם המדרגות">
+        <img loading="lazy" src="hotel/stairs.jpg" alt="גרם המדרגות">
+        <span class="cap">גרם המדרגות</span>
+      </button>
+      <button type="button" class="g-third" data-src="hotel/room-beds.jpg" data-cap="חדר גדול יותר">
+        <img loading="lazy" src="hotel/room-beds.jpg" alt="חדר גדול יותר">
+        <span class="cap">חדר גדול יותר</span>
+      </button>
+      <button type="button" class="g-third" data-src="hotel/room-detail.jpg" data-cap="ליד המיטה">
+        <img loading="lazy" src="hotel/room-detail.jpg" alt="ליד המיטה">
+        <span class="cap">ליד המיטה</span>
+      </button>
+      <button type="button" class="g-third" data-src="hotel/location-map.jpg" data-cap="המיקום">
+        <img loading="lazy" src="hotel/location-map.jpg" alt="המיקום">
+        <span class="cap">המיקום</span>
+      </button>
+    </div>
+
+    <div class="htlgrid">
+
+      <div class="htlcard">
+        <span class="kind">כתובת</span>
+        <h4>Via Palermo 30</h4>
+        <p>רובע מונטי, 00184 רומא — רחוב צדדי ושקט, במרחק הליכה מהקולוסיאום, מזרקת טרווי, הפנתיאון ותחנת טרמיני,
+          ובין תחנות הרכבת התחתית רפובליקה וברבריני.</p>
+        <p>קבלה: <a class="tel" dir="ltr" href="tel:+390648840360">+39 06 488 4360</a></p>
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Hotel%20Virgilio%20Via%20Palermo%2030%20Rome" target="_blank" rel="noopener">📍 פתחו במפות</a>
+      </div>
+
+      <div class="htlcard">
+        <span class="kind">כניסה ויציאה</span>
+        <h4>שלישי 20 באוק׳ → ראשון 25 באוק׳</h4>
+        <dl class="hdl">
+          <div><dt>כניסה</dt><dd>שלישי 20 באוק׳<small>מהשעה 14:00, בכל שעה עד חצות</small></dd></div>
+          <div><dt>יציאה</dt><dd>ראשון 25 באוק׳<small>עד השעה 12:00</small></dd></div>
+          <div><dt>קבלה</dt><dd>פתוחה 24 שעות<small>תמיד יש מישהו בדלפק</small></dd></div>
+        </dl>
+        <p style="margin-top:11px">הטיסה נוחתת סביב 14:00, בדיוק השעה שבה נפתחת הכניסה לחדרים, כך שהחדר אמור להיות מוכן
+          עד שתגיעו למונטי.</p>
+      </div>
+
+      <div class="htlcard">
+        <span class="kind">החדר שלכן</span>
+        <h4>חדר זוגי קלאסי</h4>
+        <p>הוזמן לשתי מבוגרות. הבקשה המיוחדת שלכן ל<b>מיטה זוגית גדולה אחת</b> אושרה על ידי המלון ללא תוספת תשלום,
+          כך שלא אמורות לחכות לכן שתי מיטות יחיד צמודות.</p>
+        <p>בחדרים יש מזגן, טלוויזיה עם ערוצי לוויין, קומקום ושולחן כתיבה.</p>
+      </div>
+
+      <div class="htlcard">
+        <span class="kind">ההזמנה</span>
+        <h4>אישור מספר 6697120067</h4>
+        <dl class="hdl">
+          <div><dt>חדר ומע״מ</dt><dd>&euro; 1,340.00</dd></div>
+          <div><dt>הנחה</dt><dd class="sub">&minus; &euro; 109.64</dd></div>
+          <div><dt>במלון</dt><dd>&euro; 1,230.36</dd></div>
+          <div><dt>מס עירוני</dt><dd>&euro; 60.00<small>6 אירו לאדם ללילה, משולם במלון</small></dd></div>
+          <div><dt>סה״כ</dt><dd class="total">&euro; 1,290.36</dd></div>
+        </dl>
+        <a class="btn" href="https://www.booking.com/hotel/it/hotelvirgilioroma.html" target="_blank" rel="noopener">🔖 עמוד הנכס</a>
+        <a class="btn ghost" href="https://www.hotelvirgilio.it/" target="_blank" rel="noopener">אתר המלון</a>
+      </div>
+
+      <div class="htlcard">
+        <span class="kind">איסוף משדה התעופה</span>
+        <h4>75 אירו, אם בא לכן בקלות</h4>
+        <p>המלון מפעיל שירות איסוף פרטי מפיומיצ׳ינו: <b>75 אירו לכיוון אחד</b> לרכב שמסיע עד שני נוסעים.</p>
+        <p>כדי להזמין צריך לשלוח למלון במייל את <b>מספר הטיסה, התאריך, השעה ומספר נייד עם קידומת בינלאומית,
+          שבוע לפני ההגעה</b> — כלומר בערך עד <b>13 באוקטובר</b>.</p>
+        <p>אחרת: רכבת לאונרדו אקספרס לטרמיני (כ-14 אירו, כ-32 דקות) ואז מונית קצרה, או מונית במחיר קבוע משדה התעופה
+          בכ-50 אירו.</p>
+      </div>
+
+      <div class="htlcard">
+        <span class="kind">ארוחת בוקר</span>
+        <h4>12 אירו לאדם, לכל לילה</h4>
+        <p>לא כלולה בהזמנה — זו תוספת, שמוגשת כמזנון בחדר האוכל המקומר. לשתיכן על פני חמישה בקרים זה 120 אירו,
+          אז שווה להחליט על זה במודע ולא כברירת מחדל: במונטי יש שפע בתי קפה טובים לקפוצ׳ינו וקורנטו בכמה אירו.</p>
+      </div>
+
+      <div class="htlcard wide">
+        <span class="kind">כדאי לדעת</span>
+        <h4>שלושה דברים שקל להיתקל בהם</h4>
+        <p><b>כל השהייה משולמת במלון בהגעה</b>, לא מראש דרך אתר ההזמנות — ו<b>המלון אינו מקבל מזומן</b>.
+          קחו כרטיס אשראי שעובד בחו״ל. אם תעזבו מוקדם, המלון עדיין יגבה את מלוא התקופה שהוזמנה.</p>
+      </div>
+
+    </div>
+
+    <div class="htl-flag">
+      <h4>⏳ שני תאריכים ששווה להכניס ליומן</h4>
+      <ul>
+        <li><b>13 באוקטובר</b> — המועד האחרון להזמנת האיסוף משדה התעופה ב-75 אירו (שבוע לפני ההגעה).</li>
+        <li><b>14 באוקטובר, 23:59</b> — סוף תקופת הביטול החינם. ביטול מ-15 באוקטובר ואילך עולה 260 אירו.</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -250,21 +464,14 @@
       </div>
     </div>
 
-    <div class="subhead"><span class="sec-label">איפה תלונו · שניהם מוזמנים (ביטול חינם)</span></div>
+    <div class="subhead"><span class="sec-label">איפה תלונו · מוזמן ✓</span></div>
     <div class="cards">
-      <div class="card" data-map="Hotel Virgilio Via Palermo 30 Rome" data-book-label="🏨 פרטי המלון" data-book-url="https://www.google.com/maps/search/?api=1&query=Hotel%20Virgilio%20Via%20Palermo%2030%20Rome" data-book-note="אופציה 1 · Monti · Via Palermo 30 · מוזמן ✓ · קבלה 24 שעות · ₪4,483 ל-5 לילות (חדר, ÷2) · בקשו חדר בבניין הראשי">
+      <div class="card" data-map="Hotel Virgilio Via Palermo 30 Rome" data-book-label="🏨 פרטי המלון" data-book-url="https://www.google.com/maps/search/?api=1&query=Hotel%20Virgilio%20Via%20Palermo%2030%20Rome" data-book-note="Monti · Via Palermo 30 · מוזמן ✓ · קבלה 24 שעות · 1,290.36 אירו ל-5 לילות (~645 לאחת) · בקשו חדר בבניין הראשי">
         <div class="imgwrap cphoto" data-map="Hotel Virgilio Via Palermo 30 Rome"><img loading="lazy" alt="Monti, רומא" src="https://commons.wikimedia.org/wiki/Special:FilePath/Via%20dei%20Serpenti%20-%20Rome.jpg?width=1000" onerror="this.remove()"></div>
-        <span class="kind">אופציה 1 · Monti · קבלה 24 שעות · מוזמן ✓</span><h4>Hotel Virgilio</h4>
+        <span class="kind">Monti · קבלה 24 שעות · מוזמן ✓</span><h4>Hotel Virgilio</h4>
         <p>הבחירה שלכן — מלון מדורג היטב (4.3★, 1,173 ביקורות) עם קבלה מאוישת 24 שעות, חדרים מרווחים ונקיים וצוות מקצועי, ברחוב שקט במרכז Monti. הליכה לקולוסיאום, לטרווי, לפנתאון ולתחנה. טיפ: בקשו חדר בבניין הראשי (לא באגף).</p>
-        <div class="addr"><b>Via Palermo 30 · Monti</b><br>5 לילות · ₪4,483 (חדר, ÷2)</div>
+        <div class="addr"><b>Via Palermo 30 · Monti</b><br>5 לילות · 1,290.36 אירו (~645 לאחת)</div>
         <div class="badgerow"><span class="badge b-city">מרכזי</span><span class="badge b-shop">מוזמן ✓</span></div>
-      </div>
-      <div class="card" data-map="The Spanish Suite Campo de' Fiori Piazza Cairoli Rome" data-book-label="🏨 פרטי המלון" data-book-url="https://www.google.com/maps/search/?api=1&query=The%20Spanish%20Suite%20Campo%20de%27%20Fiori%20Piazza%20Cairoli%20Rome" data-book-note="אופציה 2 (גיבוי) · Campo de' Fiori · Piazza Cairoli · מוזמן ✓ · ₪4,045 ל-5 לילות (חדר, ÷2) · מארח נחמד, צ'ק-אין מאוחר בוואטסאפ">
-        <div class="imgwrap cphoto" data-map="The Spanish Suite Campo de' Fiori Piazza Cairoli Rome"><img loading="lazy" alt="Campo de' Fiori, רומא" src="https://commons.wikimedia.org/wiki/Special:FilePath/Campo%20de%27%20Fiori%20(Rome).jpg?width=1000" onerror="this.remove()"></div>
-        <span class="kind">אופציה 2 · Campo de' Fiori · גיבוי ✓</span><h4>The Spanish Suite — Campo de' Fiori</h4>
-        <p>אופציית גיבוי — נקי ומרכזי ב-Piazza Cairoli השקטה, ממש ליד Campo de' Fiori. מרחק הליכה קצר מחיי הלילה של Trastevere ו-15–20 דק' לפנתאון, לטרווי ול-Piazza Navona. מארח נחמד בוואטסאפ עם צ'ק-אין מאוחר.</p>
-        <div class="addr"><b>Piazza Cairoli · Campo de' Fiori</b><br>5 לילות · ₪4,045 (חדר, ÷2)</div>
-        <div class="badgerow"><span class="badge b-city">מרכזי</span><span class="badge b-shop">גיבוי ✓</span></div>
       </div>
       <div class="card" data-map="Armando al Pantheon Rome" data-book-label="🍽 הזמנה / מפה" data-book-url="https://www.google.com/maps/search/?api=1&query=Armando%20al%20Pantheon%20Rome" data-book-note="טרטוריה משפחתית היסטורית ליד הפנתאון · קרבונרה · הזמינו מראש · בלי פירות ים">
         <div class="imgwrap cphoto" data-map="Armando al Pantheon Rome"><img loading="lazy" alt="פסטה קרבונרה" src="https://commons.wikimedia.org/wiki/Special:FilePath/Espaguetis%20carbonara.jpg?width=1000" onerror="this.remove()"></div>
@@ -539,10 +746,10 @@
     <div class="sec-label">לפני שיוצאים — מידע שימושי</div>
     <h2>הערות מעשיות</h2>
     <div class="notegrid">
-      <div class="note"><h4>המלונות שלכן (שניהם מוזמנים)</h4>
-        <p><span class="flag">אופציה 1 — Hotel Virgilio (Monti)</span> (מוזמן ✓) — מדורג היטב (4.3★, 1,173 ביקורות), קבלה 24 שעות, חדרים מרווחים ונקיים, רחוב שקט במרכז Monti; הליכה לקולוסיאום, לטרווי, לפנתאון ולתחנה. ₪4,483 ל-5 לילות (~₪2,242 לאחת). בקשו חדר בבניין הראשי.<br><br><span class="flag">אופציה 2 — The Spanish Suite, Campo de' Fiori</span> (מוזמן ✓, גיבוי) — נקי ומרכזי ב-Piazza Cairoli השקטה, מרחק הליכה קצר מ-Trastevere; מארח בוואטסאפ עם צ'ק-אין מאוחר. ₪4,045 ל-5 לילות (~₪2,023 לאחת). לשניהם ביטול חינם עד 13 באוק׳.</p></div>
+      <div class="note"><h4>המלון שלכן</h4>
+        <p><span class="flag">Hotel Virgilio (Monti)</span> (מוזמן ✓) — קבלה מאוישת 24 שעות, חדרים מרווחים ונקיים, רחוב שקט במרכז Monti; הליכה לקולוסיאום, לטרווי, לפנתאון ולתחנה. חדר זוגי קלאסי, 5 לילות, 1,290.36 אירו הכול כלול (בערך 645 לאחת). ביטול חינם עד 14 באוק׳. בקשו חדר בבניין הראשי.</p></div>
       <div class="note"><h4>💶 תקציב — לתכנן חכם</h4>
-        <p>הטיסות הוזמנו — <span class="flag">Wizz Air, €265 לאחת</span> הלוך-חזור. עם כ-₪4,750–₪5,500 לאחת לשאר (המלון הוא ~₪2,023 מזה), יש מקום אמיתי ליהנות — ארוחות טובות, אפריטיבו, סדנת הבישול וקצת קניות. כמה מהלכים חכמים מותחים את זה עוד: להישען על <span class="flag">אתרים חינמיים</span> (הפנתאון, טרווי, Spanish Steps, St Peter's), צהריים של panini/פיצה, ולמלא מים מהברזיות ברחוב.</p></div>
+        <p>הטיסות הוזמנו — <span class="flag">Wizz Air, €265 לאחת</span> הלוך-חזור. עם כ-₪4,750–₪5,500 לאחת לשאר (המלון הוא בערך 645 אירו מזה לאחת), יש מקום אמיתי ליהנות — ארוחות טובות, אפריטיבו, סדנת הבישול וקצת קניות. כמה מהלכים חכמים מותחים את זה עוד: להישען על <span class="flag">אתרים חינמיים</span> (הפנתאון, טרווי, Spanish Steps, St Peter's), צהריים של panini/פיצה, ולמלא מים מהברזיות ברחוב.</p></div>
       <div class="note"><h4>תחבורה — בלי רכב</h4>
         <p>המרכז הליכתי; המטרו והאוטובוסים זולים (כרטיס בודד €1.50, או כרטיס 48/72 שעות). משדה התעופה: <span class="flag">Leonardo Express</span> ל-Termini (~€14) או מונית במחיר קבוע (~€50 למרכז).</p></div>
       <div class="note"><h4>בטיחות בלילה</h4>
@@ -606,5 +813,32 @@
 <script>var TRIP={start:"2026-10-20",days:6,todayLabel:'היום'};</script>
 <script>(function(){try{var st=new Date(TRIP.start+"T00:00:00"),td=new Date();td.setHours(0,0,0,0);var df=Math.round((td-st)/86400000);if(df>=0&&df<TRIP.days){var el=document.getElementById("day"+(df+1));if(el){el.classList.add("is-today");var h=el.querySelector(".banner h2")||el.querySelector("h2");if(h){var t=document.createElement("span");t.className="todaytag";t.textContent=TRIP.todayLabel;h.appendChild(t);}if(!location.hash){setTimeout(function(){el.scrollIntoView({behavior:"smooth",block:"start"});},500);}}}}catch(e){}})();</script>
 <script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("sw.js").catch(function(){});});}</script>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="תמונות המלון">
+  <button class="lbx" type="button" aria-label="סגירה">&times;</button>
+  <button class="lbp" type="button" aria-label="תמונה קודמת">&#8249;</button>
+  <button class="lbn" type="button" aria-label="תמונה הבאה">&#8250;</button>
+  <img id="lbimg" src="" alt="">
+  <div class="lbcap" id="lbcap"></div>
+</div>
+<script>
+(function(){
+  var shots=[].slice.call(document.querySelectorAll('.htlgal button'));
+  if(!shots.length) return;
+  var lb=document.getElementById('lb'),im=document.getElementById('lbimg'),cp=document.getElementById('lbcap'),i=0;
+  function show(n){i=(n+shots.length)%shots.length;var b=shots[i];im.src=b.dataset.src;im.alt=b.dataset.cap;cp.textContent=b.dataset.cap;}
+  function open(n){show(n);lb.classList.add('open');document.body.style.overflow='hidden';}
+  function close(){lb.classList.remove('open');document.body.style.overflow='';im.src='';}
+  shots.forEach(function(b,n){b.addEventListener('click',function(){open(n);});});
+  lb.querySelector('.lbx').addEventListener('click',close);
+  lb.querySelector('.lbp').addEventListener('click',function(e){e.stopPropagation();show(i-1);});
+  lb.querySelector('.lbn').addEventListener('click',function(e){e.stopPropagation();show(i+1);});
+  lb.addEventListener('click',function(e){if(e.target===lb||e.target===im)close();});
+  document.addEventListener('keydown',function(e){
+    if(!lb.classList.contains('open'))return;
+    if(e.key==='Escape')close(); else if(e.key==='ArrowRight')show(i+1); else if(e.key==='ArrowLeft')show(i-1);
+  });
+})();
+</script>
 </body>
 </html>

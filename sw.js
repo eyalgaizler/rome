@@ -1,11 +1,13 @@
 // Rome trip — service worker v1 (offline app shell + offline map tiles)
-const CORE = 'rome-core-v7';
+const CORE = 'rome-core-v8';
 const RUNTIME = 'rome-runtime-v1';
 const TILES = 'rome-tiles-v1';
 const KEEP = [CORE, RUNTIME, TILES];
 const ASSETS = [
   './', './index.html', './index-he.html', './map.html', './essentials.html', './essentials-he.html', './qr-install.png',
-  './manifest.webmanifest', './icon-192.png', './icon-512.png', './apple-touch-icon.png'
+  './manifest.webmanifest', './icon-192.png', './icon-512.png', './apple-touch-icon.png',
+  // hotel photos — available offline on the trip
+  './hotel/facade.jpg', './hotel/room-double.jpg', './hotel/room-desk.jpg', './hotel/reception.jpg', './hotel/breakfast.jpg', './hotel/stairs.jpg', './hotel/room-beds.jpg', './hotel/room-detail.jpg', './hotel/location-map.jpg'
 ];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CORE).then(c => c.addAll(ASSETS)).then(() => self.skipWaiting()));
