@@ -772,17 +772,24 @@
   const rev=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');rev.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px'});
   document.querySelectorAll('.reveal').forEach(el=>rev.observe(el));
 
-  const GMAP=q=>'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q);
+  // Every place opens as a walking route from the hotel; the hotel itself stays a plain map search
+  const HOTEL='Hotel Virgilio, Via Palermo 30, 00184 Roma';
+  const isHotel=q=>/hotel virgilio/i.test(q);
+  const GMAP=q=>isHotel(q)
+    ? 'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q)
+    : 'https://www.google.com/maps/dir/?api=1&origin='+encodeURIComponent(HOTEL)+'&destination='+encodeURIComponent(q)+'&travelmode=walking';
+  // data-book-url map links are plain searches in the markup; give them the same route
+  const asRoute=u=>{try{const x=new URL(u);const q=x.searchParams.get('query');return x.pathname==='/maps/search/'&&q?GMAP(q):u;}catch(e){return u;}};
 
   document.querySelectorAll('.imgwrap').forEach((w)=>{
     const q=w.getAttribute('data-map');
     if(q){
       const a=document.createElement('a');
       a.href=GMAP(q); a.target='_blank'; a.rel='noopener'; a.className='maplink';
-      a.setAttribute('aria-label','הצג את '+q+' במפה');
+      a.setAttribute('aria-label',isHotel(q)?'הצג את '+q+' במפה':'מסלול הליכה מהמלון אל '+q);
       while(w.firstChild){a.appendChild(w.firstChild);}
       const pill=document.createElement('span');
-      pill.className='mappill'; pill.textContent='📍 הצג במפה';
+      pill.className='mappill'; pill.textContent=isHotel(q)?'📍 הצג במפה':'🚶 מסלול הליכה מהמלון';
       a.appendChild(pill);
       w.appendChild(a);
     }
@@ -794,7 +801,7 @@
     const note=host.getAttribute('data-book-note');
     if(note){const n=document.createElement('div');n.className='booknote';n.innerHTML=note;host.appendChild(n);}
     const btn=document.createElement('a');
-    btn.href=url; btn.target='_blank'; btn.rel='noopener'; btn.className='btn'; btn.textContent=label;
+    btn.href=asRoute(url); btn.target='_blank'; btn.rel='noopener'; btn.className='btn'; btn.textContent=label;
     host.appendChild(btn);
   });
 </script>
