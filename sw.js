@@ -1,5 +1,5 @@
 // Rome trip — service worker v1 (offline app shell + offline map tiles)
-const CORE = 'rome-core-v14';
+const CORE = 'rome-core-v16';
 const RUNTIME = 'rome-runtime-v1';
 const TILES = 'rome-tiles-v1';
 const KEEP = [CORE, RUNTIME, TILES];
@@ -9,8 +9,10 @@ const ASSETS = [
   // hotel photos — available offline on the trip
   './hotel/facade.jpg', './hotel/room-double.jpg', './hotel/room-desk.jpg', './hotel/reception.jpg', './hotel/breakfast.jpg', './hotel/stairs.jpg', './hotel/room-beds.jpg', './hotel/room-detail.jpg', './hotel/location-map.jpg'
 ];
+// GitHub Pages sends Cache-Control: max-age=600, so a plain fetch can be answered by the
+// browser's HTTP cache with a page up to 10 minutes old. 'reload' / 'no-cache' go to the server.
 self.addEventListener('install', e => {
-  e.waitUntil(caches.open(CORE).then(c => c.addAll(ASSETS)).then(() => self.skipWaiting()));
+  e.waitUntil(caches.open(CORE).then(c => c.addAll(ASSETS.map(u => new Request(u, { cache: 'reload' })))).then(() => self.skipWaiting()));
 });
 self.addEventListener('activate', e => {
   e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => !KEEP.includes(k)).map(k => caches.delete(k)))).then(() => self.clients.claim()));
@@ -44,7 +46,8 @@ self.addEventListener('fetch', e => {
         const done = r => { if (!settled) { settled = true; resolve(r); } };
         // don't let a stalled network hold the page hostage
         const timer = setTimeout(() => { fromCache().then(h => { if (h) done(h); }); }, 3500);
-        fetch(req).then(r => {
+        // revalidate with the server (a cheap 304 when nothing changed), never the HTTP cache
+        fetch(req, { cache: 'no-cache' }).then(r => {
           clearTimeout(timer);
           if (r && r.ok) {
             const c = r.clone();
